@@ -1,0 +1,25 @@
+<!--META {"out":"trademark.html","title":"Trademark & Copyright Disclosure","desc":"Geo.Vision's trademark and copyright disclosure: independence from GeoVision Inc. and other brands, third-party data licences and attributions, and how to report concerns."} -->
+<section class="page-hero compact"><div class="wrap"><h1>Trademark &amp; copyright disclosure</h1><p class="muted">Last updated: {{TODAY}}</p></div></section>
+<section class="wrap prose">
+<h2>Our name</h2>
+<p>"Geo.Vision" is the name of this website, derived from its domain name geo.vision and always written with the dot. It describes the site's subject — a view ("vision") of the Earth ("geo"). Geo.Vision is <b>not affiliated with, endorsed by, sponsored by or connected to GeoVision Inc.</b> (a video-surveillance company) or any other business using a similar name, and offers no security, surveillance or camera products or services. Any similarity in names is coincidental and no confusion or association is intended. We do not use any third party's logos, trade dress or product names as our own.</p>
+<h2>Other trademarks</h2>
+<p>NASA, USGS, Google, YouTube, AdSense, Esri, ArcGIS, OpenStreetMap, PayPal and all other names mentioned are trademarks or registered trademarks of their respective owners. They are used only to identify sources of data, services or content, which constitutes nominative fair use. Their use does not imply endorsement. Geo.Vision is not affiliated with any of these organisations.</p>
+<h2>Copyright</h2>
+<p>&copy; {{YEAR}} Geo.Vision. Original text, page designs, graphics and source code on this site are protected by copyright. You may link to any page and quote short excerpts with attribution and a link.</p>
+<h2>Third-party data and content</h2>
+<table><thead><tr><th>Source</th><th>Used for</th><th>Licence / terms</th></tr></thead><tbody>
+<tr><td>NASA GIBS / Worldview, NASA EONET</td><td>Satellite base maps, natural events</td><td>NASA data is generally not subject to copyright in the United States; credited per NASA guidelines. NASA does not endorse this site.</td></tr>
+<tr><td>U.S. Geological Survey</td><td>Earthquake feeds</td><td>U.S. public domain; credited as USGS.</td></tr>
+<tr><td>OpenStreetMap</td><td>Street base map</td><td>&copy; OpenStreetMap contributors, Open Database License (ODbL).</td></tr>
+<tr><td>Natural Earth (via world-atlas)</td><td>Country shapes</td><td>Public domain.</td></tr>
+<tr><td>mledoze/countries</td><td>Country facts</td><td>Open Database License (ODbL).</td></tr>
+<tr><td>Open-Meteo</td><td>Weather on country pages</td><td>CC BY 4.0.</td></tr>
+<tr><td>flagcdn.com</td><td>Flag images</td><td>National flags are public-domain symbols.</td></tr>
+<tr><td>wheretheiss.at</td><td>ISS position</td><td>Free public API; credited.</td></tr>
+<tr><td>Leaflet</td><td>Map library</td><td>BSD-2-Clause.</td></tr>
+<tr><td>YouTube videos</td><td>Video library</td><td>Embedded via YouTube's player; copyright remains with each creator.</td></tr>
+</tbody></table>
+<h2>Reporting infringement</h2>
+<p>If you believe content on Geo.Vision infringes your copyright or trademark, please send a notice through our <a href="contact.html">contact form</a> (topic "Other") including: identification of the work or mark, the URL of the material, your contact details, a statement of good-faith belief that the use is unauthorised, and a statement that the information is accurate and that you are authorised to act. We respond promptly and remove material where appropriate.</p>
+</section>

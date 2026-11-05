@@ -1,0 +1,29 @@
+<!--META {"out":"privacy.html","title":"Privacy Policy","desc":"How Geo.Vision collects, uses and protects information, including cookies, Google AdSense advertising, forms and your choices."} -->
+<section class="page-hero compact"><div class="wrap"><h1>Privacy policy</h1><p class="muted">Last updated: {{TODAY}}</p></div></section>
+<section class="wrap prose">
+<p>This policy explains what information Geo.Vision ("we", "us") collects when you use https://geo.vision (the "Site"), how we use it and the choices you have.</p>
+<h2>1. Information you give us</h2>
+<p>When you submit a form — contact, project brief, provider application, newsletter, contest entry, job application, pledge or advertising inquiry — we receive the details you enter (for example your name, email address, phone number, organisation and message). Form submissions are delivered to us by email through the third-party service FormSubmit (formsubmit.co), which processes the data only to deliver it.</p>
+<p><b>Project briefs:</b> if you request quotes through Geo.Vision Projects and tick the consent box, we share your brief and contact details with up to three geospatial providers selected to fit your request, so they can contact you. Those providers handle your data under their own privacy policies. We do not sell personal information or share it for unrelated marketing.</p>
+<h2>2. Information collected automatically</h2>
+<p>Like most websites, our host (GitHub Pages) and our advertising partners may log technical data such as IP address, browser type, pages visited and referring site. Games and tools store preferences and scores in your browser's local storage; this data stays on your device and is never sent to us.</p>
+<p><b>Location:</b> some tools ask for your location. This is optional, handled by your browser and used only on your device to perform the calculation. We never receive or store it.</p>
+<h2>3. Advertising and cookies</h2>
+<p>We use Google AdSense to display ads. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visits to this Site and/or other sites on the Internet.</p>
+<ul><li>You may opt out of personalised advertising by visiting Google's <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Ads Settings</a>.</li><li>You can opt out of some third-party vendors' use of cookies for personalised advertising at <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a> or <a href="https://www.youronlinechoices.eu/" target="_blank" rel="noopener">youronlinechoices.eu</a>.</li><li>Learn how Google uses information from sites that use its services at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.</li></ul>
+<p>Visitors in the European Economic Area, the UK and Switzerland are shown a consent message, and we respect your choice; choosing "Essential only" in our notice requests non-personalised ads. See our <a href="cookies.html">cookie policy</a>.</p>
+<h2>4. Third-party content</h2>
+<p>The Site loads data and content from third parties when you use certain features: map tiles (NASA GIBS, OpenStreetMap), earthquake data (USGS), natural-event data (NASA EONET), ISS position (wheretheiss.at), weather (Open-Meteo), flag images (flagcdn.com), fonts (Google Fonts), libraries (unpkg.com) and videos (YouTube, in privacy-enhanced mode and only after you click play). These services receive your IP address as part of the request and are governed by their own policies.</p>
+<h2>5. How we use information</h2>
+<p>To reply to you, deliver requested services, send newsletters you subscribed to (each email has an unsubscribe link), run contests, evaluate job applications, keep the Site secure and improve it. Our legal bases (where GDPR applies) are your consent, the performance of a request you made, and our legitimate interest in operating the Site.</p>
+<h2>6. Retention and security</h2>
+<p>We keep form submissions only as long as needed for the purpose (typically up to 24 months, or until you ask us to delete them) and protect them with reasonable safeguards. No method of transmission is 100% secure.</p>
+<h2>7. Your rights</h2>
+<p>Depending on where you live (for example under GDPR, UK GDPR, PIPEDA or the CCPA/CPRA), you may have rights to access, correct, delete or port your data, to object to or restrict processing, and to withdraw consent. California residents: we do not sell or "share" personal information as those terms are defined. To make a request, use our <a href="contact.html">contact form</a> and choose "Privacy request".</p>
+<h2>8. Children</h2>
+<p>The Site is suitable for general audiences, including students, but is not directed at children under 13, and we do not knowingly collect personal information from them. Contest entrants aged 13–17 need parental consent.</p>
+<h2>9. Changes</h2>
+<p>We may update this policy; the date above shows the latest revision.</p>
+<h2>10. Contact</h2>
+<p>Questions about privacy? <a href="contact.html">Contact us</a>.</p>
+</section>
