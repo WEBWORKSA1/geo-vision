@@ -1,0 +1,61 @@
+<!--META {"slug":"what-is-gis","cat":"GIS","updated":"2026-11-05","title":"What Is GIS? A Plain-English Guide to Geographic Information Systems","h1":"What is GIS? A plain-English guide","desc":"What a geographic information system is, how layers, vectors and rasters work, real-world uses, free software to start with and how to learn GIS."} -->
+<p>A <b>geographic information system (GIS)</b> is a way of storing, analysing and displaying information that is tied to a place. If a spreadsheet answers "how many?", a GIS answers "how many, <i>where</i>, and what is nearby?" It combines maps with databases so that every point, line or area on the map carries information you can query, measure and compare.</p>
+<p>You already use GIS without noticing. Navigation apps, food-delivery tracking, weather radar, property listings with school catchments and the <a href="../live.html">Live Earth map</a> on this site are all GIS applications under the hood.</p>
+
+<h2>The big idea: layers</h2>
+<p>A GIS treats the world as a stack of transparent layers that share the same coordinates. One layer might hold roads, another rivers, another land parcels, another population counts, and another satellite imagery. Because they line up, you can ask questions across layers: <i>Which homes lie within 200 metres of a river and below 5 metres elevation?</i> That single question combines buildings, hydrology and terrain — something no individual map can answer.</p>
+<p>The idea is older than computers. In 1854, physician John Snow plotted cholera deaths on a map of London's Soho and noticed they clustered around one water pump on Broad Street — an early, famous example of spatial analysis. The first computerised system to be called a GIS, the Canada Geographic Information System, was developed in the 1960s under Roger Tomlinson to inventory the country's land.</p>
+
+<h2>Two ways to store the world: vector and raster</h2>
+<table><thead><tr><th></th><th>Vector</th><th>Raster</th></tr></thead><tbody>
+<tr><td>What it is</td><td>Points, lines and polygons defined by coordinates</td><td>A grid of cells (pixels), each holding a value</td></tr>
+<tr><td>Good for</td><td>Discrete things: wells, roads, borders, buildings</td><td>Continuous surfaces: elevation, temperature, imagery</td></tr>
+<tr><td>Common formats</td><td>Shapefile, GeoJSON, GeoPackage, KML</td><td>GeoTIFF, JPEG2000, NetCDF</td></tr>
+<tr><td>Example</td><td>Country borders in our <a href="../atlas/index.html">atlas</a></td><td>The satellite base map on the live map</td></tr>
+</tbody></table>
+<p>Each vector feature also has a row in an <b>attribute table</b> — the "database" half of GIS. A road line might carry its name, speed limit and surface type; a country polygon might carry its capital, area and population. Styling and analysis use those attributes: colour countries by population, or select only roads with a speed limit above 80 km/h.</p>
+
+<h2>Coordinate systems: making layers line up</h2>
+<p>Every layer must know where it sits on Earth. Data is described by a <b>coordinate reference system</b> (CRS): a datum (a model of Earth's shape, such as WGS84, used by GPS) and often a projection that flattens the curved surface onto a plane. Mixing layers in different systems without converting them is the most common beginner mistake — features appear shifted, sometimes by hundreds of metres. Modern software usually reprojects "on the fly", but it is worth understanding; our guides to <a href="latitude-longitude-explained.html">latitude and longitude</a> and <a href="map-projections-explained.html">map projections</a> explain the basics.</p>
+
+<h2>What people actually do with GIS</h2>
+<ul>
+<li><b>Planning and government:</b> zoning, transport networks, emergency response routing, census mapping.</li>
+<li><b>Environment:</b> tracking deforestation, mapping habitats, modelling flood and wildfire risk.</li>
+<li><b>Business:</b> choosing store locations, defining sales territories, optimising delivery routes, analysing catchment areas.</li>
+<li><b>Utilities and infrastructure:</b> managing pipes, cables and assets; planning maintenance.</li>
+<li><b>Agriculture:</b> precision farming using satellite or drone crop-health maps.</li>
+<li><b>Public health:</b> mapping disease spread and access to clinics — Snow's method, at scale.</li>
+<li><b>Insurance and finance:</b> pricing risk by exposure to hazards.</li>
+</ul>
+
+<h2>Core analysis operations</h2>
+<p>Most GIS work is a combination of a few building blocks:</p>
+<ul>
+<li><b>Buffer</b> — draw a zone at a set distance around features (e.g. 500 m around schools).</li>
+<li><b>Overlay / intersect</b> — combine layers to find where conditions coincide.</li>
+<li><b>Spatial join</b> — attach attributes based on location (which district is each address in?).</li>
+<li><b>Proximity and networks</b> — nearest facility, travel time along roads.</li>
+<li><b>Surface analysis</b> — slope, aspect, line of sight and watersheds from elevation rasters.</li>
+<li><b>Classification</b> — turn imagery into land-cover classes such as forest, water and urban.</li>
+</ul>
+
+<h2>Software you can start with today</h2>
+<p><b>QGIS</b> is free, open-source desktop GIS that runs on Windows, macOS and Linux and is used professionally worldwide. <b>ArcGIS Pro</b> and ArcGIS Online from Esri are the most widely used commercial platform, especially in government and utilities. For code, Python libraries such as GeoPandas, Shapely and Rasterio, the GDAL toolkit and the PostGIS database extension form the open-source backbone of the industry. For web maps, Leaflet (which powers this site's maps) and MapLibre are popular choices.</p>
+
+<h2>Where to get free data</h2>
+<ul>
+<li>OpenStreetMap — roads, buildings and points of interest worldwide.</li>
+<li>Natural Earth — clean country, coastline and physical layers for small-scale maps.</li>
+<li>USGS EarthExplorer and the Copernicus Browser — Landsat and Sentinel satellite imagery.</li>
+<li>National open-data portals and statistical agencies — census and administrative boundaries.</li>
+</ul>
+
+<h2>How to learn GIS</h2>
+<ol>
+<li>Install QGIS and load a country boundary file and an OpenStreetMap extract for your town.</li>
+<li>Practise styling by attribute, then try a buffer and an intersect to answer a real question.</li>
+<li>Learn basic SQL and Python — they separate analysts who click from analysts who automate.</li>
+<li>Build two or three small portfolio projects around topics you care about.</li>
+</ol>
+<p>Thinking about it as a career? Read our guide to <a href="careers-in-geospatial.html">careers in geospatial</a>. Need GIS work done rather than learning it yourself? <a href="../projects.html">Describe your project</a> and we'll match you with a specialist.</p>

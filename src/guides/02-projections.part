@@ -1,0 +1,50 @@
+<!--META {"slug":"map-projections-explained","cat":"Cartography","updated":"2026-11-05","title":"Map Projections Explained: Why Every World Map Is Wrong","h1":"Why every world map is wrong: map projections explained","desc":"Why you can't flatten a globe without distortion, how Mercator, equal-area and compromise projections differ, and which projection to use for which job."} -->
+<p>Peel an orange and try to press the peel flat on a table. It tears, stretches or wrinkles — there is no way to lay a curved surface flat without changing it. Maps face exactly the same problem. A <b>map projection</b> is the mathematical recipe for turning the curved surface of the Earth into a flat map, and every projection must sacrifice something. The mathematician Carl Friedrich Gauss proved in 1827 that a sphere cannot be mapped to a plane while preserving all distances; distortion is not a mistake, it is unavoidable.</p>
+
+<h2>What gets distorted</h2>
+<p>A projection can preserve some properties, but never all of them at once across the whole map:</p>
+<ul>
+<li><b>Shape (conformal)</b> — angles and local shapes are correct; areas are not.</li>
+<li><b>Area (equal-area)</b> — every region has its true relative size; shapes get squashed.</li>
+<li><b>Distance (equidistant)</b> — distances are correct from one point or along certain lines only.</li>
+<li><b>Direction (azimuthal)</b> — directions from a central point are true.</li>
+</ul>
+<p>Cartographers visualise distortion with <i>Tissot's indicatrix</i>: identical small circles drawn across the globe, which turn into larger circles or ellipses on the flat map, showing how much each place is stretched.</p>
+
+<h2>Mercator: brilliant for sailors, misleading for everyone else</h2>
+<p>Gerardus Mercator published his projection in 1569 for navigation. Its special property is that a line of constant compass bearing is a straight line on the map, so a navigator could draw a course with a ruler. To achieve that it stretches the map more and more toward the poles, which become infinitely far away.</p>
+<p>The consequences are dramatic. On a Mercator map Greenland looks about as large as Africa, yet Africa (roughly 30 million km²) is about fourteen times larger than Greenland (roughly 2.2 million km²). Europe looks enormous relative to South America, which is in fact nearly twice as big. Play <a href="../play/bigger.html">Bigger or Smaller</a> to test how much these distortions have shaped your instincts.</p>
+<p>A variant called <b>Web Mercator</b> (EPSG:3857) became the standard for online maps because it tiles neatly into squares and keeps streets looking right at any zoom. It cuts off at about 85° latitude so that the world fits in a square. The tiles on our <a href="../live.html">Live Earth map</a> use it.</p>
+
+<h2>Equal-area projections</h2>
+<p>If you are comparing quantities across countries — population density, forest cover, wealth — you need an equal-area projection so big-looking places really are big. Popular choices include:</p>
+<ul>
+<li><b>Gall–Peters</b> — a cylindrical equal-area map made famous in the 1970s–80s debate about Eurocentric maps; it preserves area but visibly stretches shapes near the equator.</li>
+<li><b>Mollweide</b> — an elliptical world map common in science for global datasets.</li>
+<li><b>Equal Earth</b> — introduced in 2018 by Bojan Šavrič, Tom Patterson and Bernhard Jenny as a pleasing equal-area alternative for world maps; since adopted by many atlases, agencies and newsrooms for thematic maps.</li>
+</ul>
+
+<h2>Compromise projections</h2>
+<p>Many general-purpose world maps balance all distortions without eliminating any. The <b>Robinson</b> projection (1963) and the <b>Winkel tripel</b> — used by the National Geographic Society for its world maps since 1998 — look "about right" to most people, with moderate area and shape errors spread across the map.</p>
+
+<h2>Projections with special talents</h2>
+<ul>
+<li><b>Azimuthal equidistant</b> — distances and directions from the centre are true. The United Nations emblem uses a polar version; radio operators use maps centred on their station.</li>
+<li><b>Gnomonic</b> — every straight line is a great circle, the shortest route between two points, which makes it useful for planning long-distance routes.</li>
+<li><b>Transverse Mercator / UTM</b> — slices the world into narrow zones with very little distortion inside each; the basis for many national grids. Our <a href="../tools/coordinates.html">coordinate converter</a> outputs UTM.</li>
+<li><b>Lambert conformal conic</b> — ideal for mid-latitude countries that stretch east–west, and common for aeronautical charts.</li>
+</ul>
+
+<h2>Which projection should you use?</h2>
+<table><thead><tr><th>Goal</th><th>Use</th></tr></thead><tbody>
+<tr><td>Web map you can zoom into streets</td><td>Web Mercator</td></tr>
+<tr><td>Compare sizes or densities worldwide</td><td>Equal Earth, Mollweide</td></tr>
+<tr><td>A good-looking general world map</td><td>Winkel tripel, Robinson</td></tr>
+<tr><td>Measure distances in a local area</td><td>UTM zone or national grid</td></tr>
+<tr><td>Map of a mid-latitude country</td><td>Lambert conformal conic or Albers equal-area conic</td></tr>
+<tr><td>Show distances from one place</td><td>Azimuthal equidistant centred there</td></tr>
+</tbody></table>
+
+<h2>The takeaway</h2>
+<p>No flat map is "true". Each projection is a tool chosen for a purpose, and the best maps state which one they use. The only truly undistorted map of the world is a globe — which is why our home page spins one. For a superb visual explanation, watch the Vox video in our <a href="../videos.html">video library</a>.</p>
+<p>Need a custom map with the right projection for print or publication? <a href="../projects.html?service=Custom%20map%20design">Get quotes from professional cartographers</a>.</p>

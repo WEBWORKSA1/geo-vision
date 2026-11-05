@@ -1,0 +1,51 @@
+<!--META {"slug":"how-satellites-see-earth","cat":"Remote sensing","updated":"2026-11-05","title":"How Satellites See Earth: Orbits, Resolution, True & False Colour","h1":"How satellites see Earth","desc":"A beginner's guide to Earth-observation satellites: orbits, the four kinds of resolution, true- and false-colour images, NDVI, radar, and where to get free imagery."} -->
+<p>Every day, dozens of Earth-observation satellites photograph the entire planet. Their images track hurricanes, measure crop health, map floods, reveal deforestation and show city lights at night. This guide explains how they work and how to read what they show — then you can explore yesterday's imagery yourself on the <a href="../live.html">Live Earth map</a>.</p>
+
+<h2>Orbits: where satellites sit and why</h2>
+<ul>
+<li><b>Low Earth orbit (LEO)</b>, roughly 160–2,000 km up, gives the sharpest views. Most imaging satellites — and the International Space Station at about 400 km — live here.</li>
+<li><b>Sun-synchronous polar orbits</b> are a special LEO type, usually 600–800 km high. The satellite crosses each latitude at the same local solar time every day, so lighting is consistent from image to image. Landsat (about 705 km), Sentinel-2 and the MODIS instruments on NASA's Terra and Aqua use these orbits.</li>
+<li><b>Geostationary orbit</b>, 35,786 km above the equator, matches Earth's rotation so the satellite stares at the same hemisphere continuously. Weather satellites such as GOES, Meteosat and Himawari send full-disk images every few minutes — that's where weather-loop animations come from.</li>
+</ul>
+
+<h2>The four kinds of resolution</h2>
+<table><thead><tr><th>Resolution</th><th>Meaning</th><th>Example</th></tr></thead><tbody>
+<tr><td>Spatial</td><td>Size of one pixel on the ground</td><td>MODIS 250 m–1 km · Landsat 30 m · Sentinel-2 10 m · commercial 30–50 cm</td></tr>
+<tr><td>Temporal</td><td>How often the same place is revisited</td><td>MODIS daily · Sentinel-2 about every 5 days · Landsat 8 & 9 together every 8 days</td></tr>
+<tr><td>Spectral</td><td>How many wavelength bands are recorded</td><td>Phone camera 3 bands · Sentinel-2 13 bands · hyperspectral hundreds</td></tr>
+<tr><td>Radiometric</td><td>How finely brightness is measured</td><td>8-bit = 256 levels; modern sensors 12–16 bit</td></tr>
+</tbody></table>
+<p>There is always a trade-off. A sensor that covers the whole planet every day, like MODIS, cannot also see individual cars. Very high-resolution commercial satellites can, but only for small areas on request.</p>
+
+<h2>True colour vs false colour</h2>
+<p>A <b>true-colour</b> image combines the red, green and blue bands the way your eyes would see the scene — oceans are blue, forests dark green, deserts tan. The "Yesterday's satellite" layer on our live map is true colour.</p>
+<p>Satellites also record light we can't see, especially <b>near-infrared (NIR)</b>. Healthy plants reflect NIR strongly. In the classic <b>false-colour infrared</b> composite, NIR is displayed as red, so vegetation glows bright red, cities appear cyan-grey and water is almost black. False colour makes burn scars, floods, crop stress and snow versus cloud far easier to distinguish.</p>
+
+<h2>NDVI: a number for "how green"</h2>
+<p>The <b>Normalized Difference Vegetation Index</b> turns those reflectances into a single value per pixel:</p>
+<blockquote>NDVI = (NIR − Red) ÷ (NIR + Red)</blockquote>
+<p>Values range from −1 to +1. Water is typically negative, bare soil and rock near zero, and dense healthy vegetation approaches 0.8 or more. Farmers, foresters and drought monitors track NDVI over time; a field whose NDVI drops faster than its neighbours may have a pest, irrigation or nutrient problem. Drone mapping companies produce the same index at centimetre resolution — <a href="hiring-a-drone-mapping-service.html">see our drone guide</a>.</p>
+
+<h2>Radar: seeing through clouds and darkness</h2>
+<p>Optical sensors need sunlight and clear skies. <b>Synthetic aperture radar (SAR)</b> sends its own microwave pulses and records the echo, so it works day or night and through cloud. Smooth water reflects the pulse away and looks dark, while buildings bounce it back brightly. SAR is essential for mapping floods under storm clouds and measuring millimetre-scale ground movement after earthquakes. The European Sentinel-1 satellites provide free SAR data globally.</p>
+
+<h2>Night lights</h2>
+<p>The VIIRS instrument can detect light so faint it records city lights, fishing fleets, gas flares and wildfires at night. Night-light images are used as a proxy for economic activity and electrification and to assess power outages after disasters. Switch to the "Night lights" base map on the live map to explore.</p>
+
+<h2>Where to get free satellite imagery</h2>
+<ul>
+<li><b>NASA Worldview</b> — browse daily global imagery back to 2000; the same NASA GIBS service powers our live map.</li>
+<li><b>Copernicus Browser</b> — Sentinel-1, -2 and -3 data from the European Union's Copernicus programme.</li>
+<li><b>USGS EarthExplorer</b> — the full Landsat archive back to 1972, free to download.</li>
+<li><b>Google Earth Engine</b> — a cloud platform for analysing petabytes of imagery, free for research and education.</li>
+</ul>
+<p>For recent sub-metre imagery of a specific site, or new captures on a date you choose ("tasking"), you need a commercial provider. Prices depend on resolution, area and urgency. <a href="../projects.html?service=Satellite%20imagery">Tell us what you need</a> and we'll connect you with specialists who can source and analyse it.</p>
+
+<h2>Reading a satellite image like a pro</h2>
+<ol>
+<li>Check the date and time — clouds, seasons and sun angle change everything.</li>
+<li>Find the scale. Is a pixel 10 m or 1 km?</li>
+<li>Identify the band combination: true colour or false colour?</li>
+<li>Look for texture and pattern, not just colour: fields are geometric, rivers meander, smoke is diffuse.</li>
+<li>Compare with an earlier image — change detection is where the stories are.</li>
+</ol>
