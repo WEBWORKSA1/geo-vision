@@ -1,0 +1,8 @@
+<!--META {"out":"tools/antipode.html","title":"Antipode Finder — what's on the other side of the Earth?","desc":"Find the antipode of any location — the point exactly opposite on the globe — and see whether it lands in a country or the ocean.","scripts":["leaflet","tools"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Antipode</span></nav><h1>Antipode finder</h1><p class="lede">Click anywhere on the map. The teal dot is your point; the amber dot is straight through the centre of the Earth.</p></div></section>
+<section class="wrap" id="tool" data-tool="antipode">
+  <button class="btn btn-sm btn-ghost" id="me" type="button">Use my location</button>
+  <div class="tool-out" aria-live="polite"></div>
+  <div class="tool-map" id="tool-map"></div>
+</section>
+<section class="wrap prose"><h2>Fun facts about antipodes</h2><p>To find an antipode, flip the sign of the latitude and shift the longitude by 180°. Because about 71% of the planet is ocean, most places — including nearly all of North America and Africa — have water on the other side. Famous land-to-land pairs include Spain and New Zealand, parts of Argentina and China, and Hong Kong and La Quiaca in northern Argentina. The answer here is based on simplified country borders, so points within a few kilometres of a coastline may be misclassified.</p></section>

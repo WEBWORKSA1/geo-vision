@@ -1,0 +1,7 @@
+<!--META {"out":"tools/world-clock.html","title":"World Clock — live time in every time zone","desc":"A customisable live world clock: current time, date, UTC offset and day/night for any time zone. Add and remove cities; your list is saved on your device.","scripts":["tools"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>World clock</span></nav><h1>World clock</h1><p class="lede">Live clocks for the zones you care about. Your selection is remembered in this browser.</p></div></section>
+<section class="wrap" id="tool" data-tool="clock">
+  <div class="guess-form"><label class="sr" for="zone">Add a time zone</label><select id="zone"></select><button class="btn btn-accent" id="add" type="button">Add clock</button></div>
+  <div class="clock-grid" aria-live="off"></div>
+</section>
+<section class="wrap prose"><h2>How time zones work</h2><p>In theory the world is split into 24 zones, each 15° of longitude wide, so local noon roughly matches the Sun overhead. In practice borders follow politics: China uses a single zone across five geographic ones, India sits on a half-hour offset (UTC+5:30), Nepal on a quarter-hour (UTC+5:45), and many countries shift their clocks for daylight saving time. The names here are IANA time-zone identifiers such as "America/Toronto", the same database used by your phone and computer, so offsets and DST changes are always current.</p></section>

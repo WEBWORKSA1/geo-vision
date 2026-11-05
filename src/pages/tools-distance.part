@@ -1,0 +1,9 @@
+<!--META {"out":"tools/distance.html","title":"Distance Calculator — great-circle distance between two places","desc":"Calculate the straight-line (great-circle) distance between any two points in km, miles and nautical miles, with bearing, midpoint and flight time.","scripts":["leaflet","tools"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Tools</a> / <span>Distance</span></nav><h1>Distance calculator</h1><p class="lede">Click the map twice, or type coordinates as "latitude, longitude".</p></div></section>
+<section class="wrap" id="tool" data-tool="distance">
+  <div class="row2"><div class="field"><label for="pt-a">Point A</label><input id="pt-a" placeholder="e.g. 51.5074, -0.1278"></div><div class="field"><label for="pt-b">Point B</label><input id="pt-b" placeholder="e.g. 40.7128, -74.0060"></div></div>
+  <button class="btn btn-sm btn-ghost" id="me-a" type="button">Use my location</button> <button class="btn btn-sm btn-ghost" id="swap" type="button">Swap A ↔ B</button>
+  <div class="tool-out" aria-live="polite"></div>
+  <div class="tool-map" id="tool-map"></div>
+</section>
+<section class="wrap prose"><h2>What is a great-circle distance?</h2><p>The shortest path between two points on a sphere follows a "great circle" — a circle whose centre is the centre of the Earth. That's why flights from Europe to North America arc over Greenland: on a flat Mercator map the route looks curved, but on the globe it's the straightest line possible. This calculator draws that true path. Driving distances are always longer because roads follow terrain; the estimate shown applies a typical 1.3× detour factor.</p><p>Common questions: London to New York is about 5,570 km; Sydney to Los Angeles about 12,050 km; and the longest possible surface distance, between antipodes, is about 20,015 km. Try the <a href="antipode.html">antipode finder</a> to see yours.</p></section>
