@@ -1,0 +1,49 @@
+<!--META {"out":"contests.html","title":"Monthly Map Challenge — geography contests with prizes","desc":"Enter the Geo.Vision Monthly Map Challenge: create a map, photo or short story about a place. Free to enter, judged on skill, with cash prizes and features."} -->
+<section class="page-hero"><div class="wrap">
+  <p class="eyebrow">Contests</p>
+  <h1>The Monthly Map Challenge</h1>
+  <p class="lede">One theme a month. Make a map, take a photo or tell a story about a place — by hand, in GIS, with a phone or a paintbrush. Free to enter. Judged on skill and creativity.</p>
+  <p class="chips"><span class="chip">🥇 1st: $250 + feature</span><span class="chip">🥈 2nd: $100</span><span class="chip">🥉 3rd: $50</span><span class="chip">🎓 Student prize: $50</span></p>
+</div></section>
+
+<section class="wrap">
+  <div class="grid-3">
+    <div class="card"><p class="eyebrow">This month's theme</p><h2>"Water finds a way"</h2><p>Rivers, coastlines, floods, irrigation, a puddle on your street — show how water shapes a place you know. Any scale, any medium.</p></div>
+    <div class="card"><h3>Categories</h3><ul class="plain"><li>🗺️ <b>Map</b> — any map: GIS, hand-drawn, data viz</li><li>📷 <b>Photo</b> — a place, landscape or "map in the wild"</li><li>✍️ <b>Story</b> — 300–800 words about a place</li><li>🎓 <b>Student</b> — any category, entrants under 25 in education</li></ul></div>
+    <div class="card"><h3>Timeline</h3><ul class="plain"><li><b>1st</b> — theme announced</li><li><b>Last day, 23:59 UTC</b> — entries close</li><li><b>~10th of next month</b> — winners announced</li></ul><p class="small muted">Plus weekly Daily Outline leaderboard shout-outs in The Daily Orbit.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="enter">
+  <div class="form-card" style="max-width:820px;margin-inline:auto">
+    <h2>Submit your entry</h2>
+    <form data-form="contest" data-subject="Geo.Vision CONTEST entry" data-ok="Entry received — good luck! You'll get a confirmation from our team within a few days.">
+      <div class="row2"><div class="field"><label for="ce-name">Name (as you'd like it credited)</label><input id="ce-name" name="name" required></div><div class="field"><label for="ce-email">Email</label><input id="ce-email" type="email" name="email" required></div></div>
+      <div class="row2"><div class="field"><label for="ce-cat">Category</label><select id="ce-cat" name="category" required><option value="">Choose…</option><option>Map</option><option>Photo</option><option>Story</option><option>Student</option></select></div><div class="field"><label for="ce-country">Country of residence</label><input id="ce-country" name="country" required></div></div>
+      <div class="field"><label for="ce-title">Title of your entry</label><input id="ce-title" name="title" required></div>
+      <div class="field"><label for="ce-link">Link to your entry</label><input id="ce-link" type="url" name="entry_link" placeholder="Google Drive, Dropbox, Flickr, your website…" required></div>
+      <div class="field"><label for="ce-desc">Short description, tools and data sources used</label><textarea id="ce-desc" name="description" required></textarea></div>
+      <label class="check"><input type="checkbox" name="original" value="yes" required> This is my original work, I hold the rights to it, and any data or images I used are properly licensed and credited.</label>
+      <label class="check"><input type="checkbox" name="rules" value="yes" required> I am at least 13 years old (with parental consent if under 18) and accept the <a href="#rules">official rules</a>.</label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-accent btn-block" type="submit">Submit entry</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="band"><div class="wrap band-grid"><div><p class="eyebrow">Sponsors</p><h2>Put your brand on a prize</h2><p class="lede">Software licences, drones, books, travel and cash prizes reach a highly engaged audience of map lovers, students and geospatial professionals. Sponsors are credited on the contest page, in the newsletter and in winner announcements.</p></div><div><a class="btn btn-sun" href="advertise.html#sponsor">Become a prize sponsor</a> <a class="btn btn-ghost" href="support.html">Fund the prize pool</a></div></div></section>
+
+<section class="wrap prose" id="rules">
+  <h2>Official rules (summary)</h2>
+  <ol>
+    <li><b>No purchase or payment necessary.</b> Entry is free. Donating to Geo.Vision does not improve your chance of winning.</li>
+    <li><b>Skill-based.</b> Winners are chosen by a judging panel on originality (30%), craft and accuracy (30%), storytelling and clarity (25%) and fit to the theme (15%). This is not a lottery or game of chance.</li>
+    <li><b>Eligibility.</b> Open worldwide to individuals aged 13+ (under-18s need parental consent), except where prohibited by law. Geo.Vision staff and judges' immediate families may not win prizes. Void where prohibited.</li>
+    <li><b>Entries.</b> One entry per person per category per month. Entries must be original, must not infringe anyone's rights, and must not contain hateful, explicit or misleading content. AI-assisted work must be disclosed.</li>
+    <li><b>Licence.</b> You keep copyright. By entering you grant Geo.Vision a non-exclusive, royalty-free licence to display your entry, credited to you, on our website, newsletter and social channels.</li>
+    <li><b>Prizes.</b> Cash prizes are paid by PayPal or bank transfer within 30 days of announcement, in USD. Prize values may vary when sponsored; winners are responsible for any taxes. Unclaimed prizes after 60 days may be reassigned.</li>
+    <li><b>Privacy.</b> Your details are used only to administer the contest; see our <a href="privacy.html">privacy policy</a>.</li>
+    <li>Geo.Vision may amend these rules, or cancel a round with notice on this page if there are insufficient valid entries; any announced prize for a closed round will still be awarded.</li>
+  </ol>
+</section>

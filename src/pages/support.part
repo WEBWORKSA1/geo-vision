@@ -1,0 +1,59 @@
+<!--META {"out":"support.html","title":"Support Geo.Vision — donate, sponsor & fund the mission","desc":"Help keep Geo.Vision free. Donations fund servers and data, new tools, marketing, paid contributors and monthly contest prizes. One-time or recurring support."} -->
+<section class="page-hero"><div class="wrap">
+  <p class="eyebrow">Support</p>
+  <h1>Keep the planet free to explore</h1>
+  <p class="lede">Geo.Vision is independent. Ads cover part of the bill; supporters make the rest possible — and decide what we build next. Every contribution is reported in our public quarterly update.</p>
+</div></section>
+
+<section class="wrap">
+  <h2>Choose where your support goes</h2>
+  <div class="opt-grid" role="radiogroup" aria-label="Fund">
+    <label class="opt"><input type="radio" name="fund" value="General operations" checked><span>🛠 Operations<small>Hosting, data feeds, domains, security</small></span></label>
+    <label class="opt"><input type="radio" name="fund" value="Promotion & marketing"><span>📣 Promotion<small>Reach more students, teachers and explorers</small></span></label>
+    <label class="opt"><input type="radio" name="fund" value="Hiring talent"><span>👩‍💻 Hiring talent<small>Pay writers, cartographers and developers</small></span></label>
+    <label class="opt"><input type="radio" name="fund" value="Contests & prizes"><span>🏆 Contests &amp; prizes<small>Fund the Monthly Map Challenge prize pool</small></span></label>
+  </div>
+  <div class="grid-4" style="margin-top:1.5rem">
+    <div class="card tier"><h3>Explorer</h3><div class="price">$5</div><ul><li>Our thanks in the quarterly update</li><li>Supporter badge on your game stats</li></ul><button class="btn btn-ghost btn-block" data-donate="5" type="button">Give $5</button></div>
+    <div class="card tier featured"><span class="badge">Most popular</span><h3>Navigator</h3><div class="price">$25</div><ul><li>Everything in Explorer</li><li>Early access to new games and tools</li><li>Vote on the next feature we build</li></ul><button class="btn btn-accent btn-block" data-donate="25" type="button">Give $25</button></div>
+    <div class="card tier"><h3>Cartographer</h3><div class="price">$100</div><ul><li>Everything in Navigator</li><li>Name listed on our supporters page</li><li>Sponsor one contest prize</li></ul><button class="btn btn-ghost btn-block" data-donate="100" type="button">Give $100</button></div>
+    <div class="card tier"><h3>Your amount</h3><div class="field" style="margin:.6rem 0"><label for="custom-amount">Amount (USD)</label><input id="custom-amount" type="number" min="1" step="1" placeholder="50"></div><ul><li>Any amount helps — truly</li></ul><button class="btn btn-sun btn-block" data-donate="custom" type="button">Give now</button></div>
+  </div>
+  <p class="muted small" style="margin-top:1rem">Donations are processed securely by PayPal in a new tab; you can pay with a PayPal account or a card. Geo.Vision is not a registered charity, so contributions are not tax-deductible. Prefer bank transfer, crypto or a recurring pledge? Use the form below.</p>
+</section>
+
+<section class="band">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow">Pledges, sponsorships &amp; in-kind help</p>
+      <h2>Support us another way</h2>
+      <p class="lede">Companies, schools and individuals can pledge monthly support, sponsor a contest, donate data or cloud credits, or volunteer skills. Tell us what you have in mind and we'll follow up with options.</p>
+      <ul class="plain"><li>🎓 Classroom &amp; school sponsorships</li><li>☁️ Cloud credits, data licences and API access</li><li>🎁 Prizes for the Monthly Map Challenge</li><li>🤝 Pro-bono writing, design or development</li></ul>
+    </div>
+    <div class="form-card">
+      <form data-form="pledge" data-subject="Geo.Vision SUPPORT pledge" data-ok="Thank you for your generosity! We'll be in touch within two business days.">
+        <div class="row2"><div class="field"><label for="sp-name">Name</label><input id="sp-name" name="name" required></div><div class="field"><label for="sp-email">Email</label><input id="sp-email" type="email" name="email" required></div></div>
+        <div class="row2"><div class="field"><label for="sp-type">Type of support</label><select id="sp-type" name="support_type" required><option value="">Choose…</option><option>Monthly pledge</option><option>One-time gift (other method)</option><option>Contest / prize sponsor</option><option>In-kind (credits, data, gear)</option><option>Volunteer skills</option></select></div><div class="field"><label for="sp-amt">Amount or value (optional)</label><input id="sp-amt" name="amount" placeholder="e.g. $50/month"></div></div>
+        <div class="field"><label for="sp-fund">Earmark for</label><select id="sp-fund" name="earmark"><option>Where it's needed most</option><option>Operations</option><option>Promotion &amp; marketing</option><option>Hiring talent</option><option>Contests &amp; prizes</option></select></div>
+        <div class="field"><label for="sp-msg">Message (optional)</label><textarea id="sp-msg" name="message"></textarea></div>
+        <label class="check"><input type="checkbox" name="public_thanks" value="yes"> You may thank me publicly by name.</label>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-accent btn-block" type="submit">Send pledge</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="wrap prose">
+  <h2>Where the money goes</h2>
+  <table><thead><tr><th>Fund</th><th>What it pays for</th><th>Target share</th></tr></thead><tbody>
+    <tr><td>Operations</td><td>Domain, hosting, monitoring, data processing, security reviews</td><td>30%</td></tr>
+    <tr><td>Talent</td><td>Paid guides by geographers and GIS professionals, cartography, development, video</td><td>35%</td></tr>
+    <tr><td>Promotion</td><td>Reaching schools, teachers and new audiences; partnerships; events</td><td>15%</td></tr>
+    <tr><td>Contests &amp; prizes</td><td>Monthly Map Challenge cash prizes, gear, judging and features</td><td>20%</td></tr>
+  </tbody></table>
+  <p>Earmarked gifts go to the fund you choose. Unearmarked gifts follow the target shares above. We publish a short summary of income and spending each quarter.</p>
+  <h2>Other free ways to help</h2>
+  <ul><li>Share today's <a href="play/outline.html">Daily Outline</a> result with a friend.</li><li>Link to Geo.Vision from your class page, blog or resource list.</li><li>Report errors in the <a href="atlas/index.html">atlas</a> through our <a href="contact.html">contact form</a>.</li><li>Subscribe to The Daily Orbit newsletter below.</li></ul>
+</section>
