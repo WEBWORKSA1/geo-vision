@@ -1,0 +1,13 @@
+<!--META {"out":"play/bigger.html","title":"Bigger or Smaller — which country is larger?","desc":"A country-size comparison game: pick the larger of two countries by area and build your streak. Learn how map projections distort size.","scripts":["games"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Play</a> / <span>Bigger or Smaller</span></nav><h1>Bigger or Smaller</h1><p class="lede">Tap the country with the larger total area. One wrong answer ends your streak.</p></div></section>
+<section class="wrap">
+  <div class="game" id="game" data-mode="bigger">
+    <div class="game-top"><span class="score">Streak <b id="score">0</b> · Best <b id="best">0</b></span></div>
+    <div class="vs"><p class="muted">Loading…</p></div>
+    <div class="vs-msg"></div>
+  </div>
+</section>
+<section class="wrap prose">
+  <h2>Why this is harder than it looks</h2>
+  <p>Most of us learned the world from Mercator-style maps, which stretch everything near the poles. Greenland looks as big as Africa but is about fourteen times smaller; Alaska looks larger than Mexico but is actually smaller. Areas in this game are total area (land plus inland water) from our atlas dataset. Read the full story in <a href="../guides/map-projections-explained.html">Why every world map is wrong</a>.</p>
+</section>

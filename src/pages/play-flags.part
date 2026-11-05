@@ -1,0 +1,14 @@
+<!--META {"out":"play/flags.html","title":"Flag Frenzy — 60-second world flags quiz","desc":"How many world flags can you name in 60 seconds? A fast, free flag quiz with tricky same-region answer choices and a saved personal best.","scripts":["games"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Play</a> / <span>Flag Frenzy</span></nav><h1>Flag Frenzy</h1><p class="lede">Sixty seconds. As many flags as you can name. Wrong answers cost you time, not points.</p></div></section>
+<section class="wrap">
+  <div class="game" id="game" data-mode="flags">
+    <div class="game-top"><span class="score">Score <b id="score">0</b> · Best <b id="best">0</b></span><span class="score">⏱ <b id="time">60</b>s</span></div>
+    <div class="timer"><i></i></div>
+    <div class="quiz-stage card" style="margin-top:1rem;min-height:340px;display:grid;place-items:center"><button class="btn btn-accent" id="start" type="button">Start the clock</button></div>
+  </div>
+</section>
+<section class="wrap prose">
+  <h2>Getting better at flags</h2>
+  <p>Most flags are built from a small vocabulary of designs: vertical or horizontal tricolours, Nordic crosses, crescents and stars, and the Pan-African red, gold and green. Learning these "families" helps far more than memorising flags one by one. When two answers look plausible, check the order of the stripes — Ireland and Côte d'Ivoire use the same colours in mirror order, while Chad and Romania are almost identical. Flag images are served by flagcdn.com; each is a public-domain national symbol.</p>
+  <p>Next, try <a href="capitals.html">Capital Quest</a> or look up any flag's country in the <a href="../atlas/index.html">world atlas</a>.</p>
+</section>

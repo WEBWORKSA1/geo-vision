@@ -1,0 +1,14 @@
+<!--META {"out":"play/pin.html","title":"Pin the Country — blank world map quiz","desc":"Find ten countries on a blank world map. Wrong clicks show distance and direction to the answer. A free interactive map quiz for all ages.","scripts":["leaflet","games"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Play</a> / <span>Pin the Country</span></nav><h1>Pin the Country</h1><p class="lede">Find each country on the blank map. Three tries per country — first-try finds score a point.</p></div></section>
+<section class="wrap">
+  <div class="game" id="game" data-mode="pin" style="max-width:1100px">
+    <div class="game-top"><span id="pin-prompt" class="q-text" style="margin:0;text-align:left">Loading…</span><span class="score">Score <b id="score">0</b> · Best <b id="best">0</b></span></div>
+    <div id="pin-map" aria-label="Blank world map"></div>
+    <p id="pin-hint" class="small" role="status" style="min-height:1.5em;margin-top:.6rem"></p>
+    <div class="result" hidden><h2 id="res-title"></h2><button class="btn btn-accent" id="again" type="button">Play again</button> <button class="btn btn-ghost" id="share" type="button">Share result</button></div>
+  </div>
+</section>
+<section class="wrap prose">
+  <h2>How it works</h2>
+  <p>Zoom and pan as you like, then click the country named at the top. A wrong click flashes red and tells you which country you picked and how far — and in which direction — the target lies. After three misses the answer is revealed in amber so you learn it for next time. Boundaries are simplified from Natural Earth and very small countries are left out of the question pool. Teachers can project this game for a whole-class challenge.</p>
+</section>

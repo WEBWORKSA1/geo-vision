@@ -1,0 +1,14 @@
+<!--META {"out":"play/capitals.html","title":"Capital Quest — world capitals quiz","desc":"Test your knowledge of world capital cities in a 60-second quiz. Free, no sign-up, with region-based answer choices and personal best tracking.","scripts":["games"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Play</a> / <span>Capital Quest</span></nav><h1>Capital Quest</h1><p class="lede">Name the capital city of each country. You have 60 seconds.</p></div></section>
+<section class="wrap">
+  <div class="game" id="game" data-mode="capitals">
+    <div class="game-top"><span class="score">Score <b id="score">0</b> · Best <b id="best">0</b></span><span class="score">⏱ <b id="time">60</b>s</span></div>
+    <div class="timer"><i></i></div>
+    <div class="quiz-stage card" style="margin-top:1rem;min-height:300px;display:grid;place-items:center"><button class="btn btn-accent" id="start" type="button">Start the clock</button></div>
+  </div>
+</section>
+<section class="wrap prose">
+  <h2>The capitals that catch everyone out</h2>
+  <p>The usual traps are countries whose largest or best-known city is not the capital: Australia (Canberra, not Sydney), Canada (Ottawa, not Toronto), Turkey (Ankara, not Istanbul), Brazil (Brasília, not Rio de Janeiro or São Paulo), Nigeria (Abuja, not Lagos) and Myanmar (Naypyidaw, not Yangon). A few countries list more than one capital — South Africa splits government between Pretoria, Cape Town and Bloemfontein, and Bolivia between Sucre and La Paz; the quiz uses the first listed in our dataset.</p>
+  <p>Every capital in this quiz links to a full country profile in the <a href="../atlas/index.html">atlas</a>.</p>
+</section>

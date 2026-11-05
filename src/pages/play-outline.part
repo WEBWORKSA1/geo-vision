@@ -1,0 +1,18 @@
+<!--META {"out":"play/outline.html","title":"Daily Outline — guess the country from its shape","desc":"A new country silhouette every day. Six guesses with distance, direction and proximity hints. Free daily geography puzzle — share your score.","scripts":["games"]} -->
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Play</a> / <span>Daily Outline</span></nav><h1>Daily Outline</h1><p class="lede">Which country is this? You have six guesses. Each wrong guess shows how far away it is, which direction to head and how close you are.</p></div></section>
+<section class="wrap">
+  <div class="game" id="game" data-mode="outline">
+    <div class="game-top"><b id="puzzle-no">Loading…</b><button class="btn btn-sm btn-ghost" id="practice" type="button">Practice a random country</button></div>
+    <div class="outline-stage"><span class="muted">Loading outline…</span></div>
+    <form class="guess-form" autocomplete="off"><label class="sr" for="guess">Your guess</label><input id="guess" list="country-names" placeholder="Type a country…" required><button class="btn btn-accent" type="submit">Guess</button></form>
+    <datalist id="country-names"></datalist>
+    <p class="guess-msg small muted" role="status"></p>
+    <ul class="guesses"></ul>
+    <div class="result" hidden><h2 id="res-title"></h2><p id="res-link"></p><p id="stats" class="small"></p><button class="btn btn-accent" id="share" type="button">Share result</button> <a class="btn btn-ghost" href="pin.html">Play Pin the Country</a></div>
+  </div>
+</section>
+<section class="wrap prose">
+  <h2>How to play</h2>
+  <p>Type any country or territory and press Guess. If it's wrong, you'll see the distance in kilometres between the centre of your guess and the centre of the mystery country, an arrow pointing toward it, and a proximity score (100% means you're on top of it, 0% means it's on the opposite side of the planet). Use those clues to close in. The puzzle changes at midnight UTC and everyone in the world gets the same country, so you can compare results without spoilers using the Share button.</p>
+  <p>Outlines come from the Natural Earth 1:110m dataset and are drawn with north at the top, scaled to fill the frame — so a tiny island and a giant country can look the same size. Small islands and microstates are excluded from the daily pool to keep it fair; you can still guess them. Your stats and streak are stored only in your browser.</p>
+</section>
