@@ -1,6 +1,6 @@
 # Geo.Vision
 
-**See the planet, live.** Live Earth map (earthquakes, natural events, ISS, day/night), daily geography games, a 250-country atlas, map tools, guides, and a geospatial lead-generation service. Static site for GitHub Pages.
+**See the planet, live.** Live Earth map (earthquakes, natural events, ISS, day/night), daily geography games, a 250-country atlas, map tools, guides, and a geospatial lead-generation service. Built for GitHub Pages (free plan, `main` branch).
 
 - Live site: https://geo.vision
 - Idea & phase-wise build prompts: [BUILD-PROMPTS.md](BUILD-PROMPTS.md)
@@ -8,24 +8,20 @@
 
 ## How it works
 
+GitHub Pages builds the site with Jekyll on every push — no build step or Actions workflow needed.
+
 ```
-src/pages/*.part     page bodies (first line = META JSON)
+_config.yml          site settings (includes_dir: src, jekyll-sitemap)
+_layouts/            default (head, AdSense, banner, nav, footer), guide, country
+_data/countries.json 250 countries & territories (mledoze/countries, ODbL)
+src/pages/*.part     page bodies, included by the wrapper pages
 src/guides/*.part    long-form guides
-build/build.mjs      wraps pages in the shared layout, generates /atlas (250 pages),
-                     data/*.json, earth-today.html and sitemap.xml
-assets/              CSS, JS (site, live, games, tools, country, home, atlas), images
-.github/workflows/   daily build: refreshes Earth Today data and commits the output
+*.html, play/, tools/, guides/, atlas/   thin wrapper pages (front matter + include)
+data/countries.json  JSON endpoint generated from _data for the games and tools
+assets/              CSS, JS (site, live, home, earth, games, tools, country, atlas), images
 ```
 
-Build locally:
-
-```bash
-npm install
-npm run build        # writes HTML to the repo root
-python3 -m http.server 8000
-```
-
-GitHub Actions runs the same build on every push to `src/`/`build/` and daily at 05:17 UTC, committing the generated pages to `main`, which GitHub Pages serves.
+Live content updates itself in the browser: USGS earthquakes, NASA EONET events, the ISS position, NASA GIBS satellite imagery, a new Daily Outline puzzle every day (UTC) and live weather on atlas pages.
 
 ## Hosting (GitHub Pages, free)
 
@@ -44,4 +40,4 @@ GitHub Actions runs the same build on every push to `src/`/`build/` and daily at
 
 ## Data & credits
 
-NASA GIBS & EONET, USGS, OpenStreetMap contributors (ODbL), Natural Earth, mledoze/countries (ODbL), Open-Meteo (CC BY 4.0), wheretheiss.at, flagcdn.com, Leaflet (BSD-2). Geo.Vision is independent and not affiliated with GeoVision Inc. or any organisation named on the site — see `trademark.html`.
+NASA GIBS & EONET, USGS, OpenStreetMap contributors (ODbL), Natural Earth (via world-atlas on jsDelivr), mledoze/countries (ODbL), Open-Meteo (CC BY 4.0), wheretheiss.at, flagcdn.com, Leaflet (BSD-2). Geo.Vision is independent and not affiliated with GeoVision Inc. or any organisation named on the site — see `trademark.html`.
