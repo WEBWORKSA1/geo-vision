@@ -1,0 +1,9 @@
+{
+  "name": "Geo.Vision — Live Earth, games & atlas",
+  "short_name": "Geo.Vision",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050a16",
+  "theme_color": "#050a16",
+  "icons": [{ "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

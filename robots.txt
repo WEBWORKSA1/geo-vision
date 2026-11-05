@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /build/
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://geo.vision/sitemap.xml
