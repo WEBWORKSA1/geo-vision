@@ -5,5 +5,5 @@ description: "Watch the planet live: earthquakes, wildfires, storms and the ISS 
 scripts: ["home", "earth"]
 schema: "{\"@context\": \"https://schema.org\", \"@type\": \"WebSite\", \"name\": \"Geo.Vision\", \"url\": \"https://geo.vision/\", \"description\": \"Live Earth data, geography games, world atlas and map tools.\"}"
 ---
-{% assign COUNTRY_COUNT = site.data.countries | size %}{% assign ET_QUAKES = '<li id="et-quakes" class="muted">Loading live data from USGS…</li>' %}{% assign ET_CATS = '<span class="chip" id="et-cats">Loading NASA EONET…</span>' %}{% assign ET_EVENTS = '<li id="et-events" class="muted">Loading open natural events…</li>' %}{% assign ET_WHEN = '<span id="et-when">live</span>' %}{% assign ET_QCOUNT = '<span id="et-qcount">…</span>' %}
+{% assign COUNTRY_COUNT = 250 %}{% assign ET_QUAKES = '<li id="et-quakes" class="muted">Loading live data from USGS…</li>' %}{% assign ET_CATS = '<span class="chip" id="et-cats">Loading NASA EONET…</span>' %}{% assign ET_EVENTS = '<li id="et-events" class="muted">Loading open natural events…</li>' %}{% assign ET_WHEN = '<span id="et-when">live</span>' %}{% assign ET_QCOUNT = '<span id="et-qcount">…</span>' %}
 {% include pages/index.part %}

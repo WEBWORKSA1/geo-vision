@@ -1,62 +1,31 @@
 ---
 layout: default
 ---
-{%- assign all = site.data.countries -%}
-{%- assign c = all | where: "slug", page.slug | first -%}
-{%- if c.ind -%}{%- if c.un -%}{%- assign status = "an independent state and member of the United Nations" -%}{%- else -%}{%- assign status = "an independent state that is not a UN member" -%}{%- endif -%}{%- else -%}{%- assign status = "a territory or dependency rather than a fully independent state" -%}{%- endif -%}
-{%- assign nbs = c.b | size -%}
+{%- assign slug = page.name | remove: ".html" -%}
 <section class="page-hero compact"><div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a> / <a href="/atlas/index.html">Atlas</a> / <a href="/atlas/index.html#{{ c.reg | default: 'other' | slugify }}">{{ c.reg | default: 'Other' }}</a> / <span>{{ c.n }}</span></nav>
-  <h1><span class="flag-xl" aria-hidden="true">{{ c.f }}</span> {{ c.n }}</h1>
-  <p class="lede">{{ c.sub | default: c.reg }} · Capital {{ c.cap | default: '—' }} · {% if c.af != '' %}{{ c.af }} km²{% else %}area n/a{% endif %}</p>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a> / <a href="/atlas/index.html">Atlas</a> / <a href="/atlas/index.html#{{ page.reg | default: 'other' | slugify }}">{{ page.reg | default: 'Other' }}</a> / <span>{{ page.n }}</span></nav>
+  <h1><span class="flag-xl" aria-hidden="true">{{ page.f }}</span> {{ page.n }}</h1>
+  <p class="lede">{{ page.sub | default: page.reg }} · Capital {{ page.cap | default: '—' }} · {% if page.af != '' %}{{ page.af }} km²{% else %}area n/a{% endif %}</p>
 </div></section>
 <section class="wrap two-col">
-  <article class="prose">
-    <h2>{{ c.n }} at a glance</h2>
-    <p>{{ c.n }} (officially {{ c.o }}) is {{ status }}, located in {{ c.sub | default: c.reg }}{% if c.reg != '' and c.sub != '' %} within {{ c.reg }}{% endif %}. {% if c.cap != '' %}Its capital is {{ c.cap }}. {% endif %}{% if c.af != '' %}It covers about {{ c.af }} km², {{ c.cmp }}, ranking #{{ c.rank }} of 249 by area in our atlas. {% endif %}{% if c.ld %}{{ c.n }} is landlocked, with no coastline on the open ocean.{% elsif nbs > 0 %}It shares land borders with {{ nbs }} {% if nbs == 1 %}country{% else %}countries{% endif %}.{% else %}It has no land borders with other countries.{% endif %}</p>
-    <div id="country-map" class="mini-map" data-lat="{{ c.ll[0] }}" data-lon="{{ c.ll[1] }}" data-a3="{{ c.a3 }}" data-area="{{ c.area }}" role="img" aria-label="Map of {{ c.n }}"></div>
+  <article class="prose" id="country" data-slug="{{ slug }}">
+    <h2>{{ page.n }} at a glance</h2>
+    <p id="c-intro">{{ page.n }} is located in {{ page.sub | default: page.reg }}{% if page.reg != '' and page.sub != '' %} within {{ page.reg }}{% endif %}. {% if page.cap != '' %}Its capital is {{ page.cap }}. {% endif %}{% if page.af != '' %}It covers about {{ page.af }} km² of land and inland water.{% endif %}</p>
+    <div id="country-map" class="mini-map" role="img" aria-label="Map of {{ page.n }}"></div>
     <h2>Key facts</h2>
-    <dl class="facts">
-      <div><dt>Official name</dt><dd>{{ c.o }}</dd></div>
-      <div><dt>Capital</dt><dd>{{ c.cap | default: '—' }}</dd></div>
-      <div><dt>Region</dt><dd>{{ c.reg }}</dd></div>
-      <div><dt>Subregion</dt><dd>{{ c.sub | default: '—' }}</dd></div>
-      <div><dt>Area</dt><dd>{% if c.af != '' %}{{ c.af }} km² ({{ c.mf }} mi²){% else %}—{% endif %}</dd></div>
-      <div><dt>Area rank</dt><dd>{% if c.rank %}#{{ c.rank }}{% else %}—{% endif %}</dd></div>
-      <div><dt>Languages</dt><dd>{{ c.lang | join: ', ' | default: '—' }}</dd></div>
-      <div><dt>Currency</dt><dd>{{ c.cur | join: ', ' | default: '—' }}</dd></div>
-      <div><dt>Demonym</dt><dd>{{ c.dem | default: '—' }}</dd></div>
-      <div><dt>Calling code</dt><dd>{{ c.idd | default: '—' }}</dd></div>
-      <div><dt>Internet TLD</dt><dd>{{ c.tld | default: '—' }}</dd></div>
-      <div><dt>ISO codes</dt><dd>{{ c.a2 }} / {{ c.a3 }}{% if c.num != '' %} / {{ c.num }}{% endif %}</dd></div>
-      <div><dt>Centroid</dt><dd>{{ c.cen }}</dd></div>
-      <div><dt>Hemispheres</dt><dd>{% if c.ll[0] >= 0 %}Northern{% else %}Southern{% endif %} &amp; {% if c.ll[1] >= 0 %}Eastern{% else %}Western{% endif %}</dd></div>
-      <div><dt>Landlocked</dt><dd>{% if c.ld %}Yes{% else %}No{% endif %}</dd></div>
-      <div><dt>UN member</dt><dd>{% if c.un %}Yes{% else %}No{% endif %}</dd></div>
-    </dl>
-    <h2>Live conditions near the centre of {{ c.n }}</h2>
-    <div class="live-box" id="country-live" data-lat="{{ c.ll[0] }}" data-lon="{{ c.ll[1] }}"><button class="btn btn-sm btn-ghost" data-load-weather>Load live weather &amp; local time</button><p class="muted small">Weather from Open-Meteo for the country's geographic centre ({{ c.ll[0] }}, {{ c.ll[1] }}); conditions in individual cities will differ.</p></div>
+    <dl class="facts" id="c-facts"><div><dt>Capital</dt><dd>{{ page.cap | default: '—' }}</dd></div><div><dt>Region</dt><dd>{{ page.reg }}</dd></div><div><dt>Subregion</dt><dd>{{ page.sub | default: '—' }}</dd></div><div><dt>Area</dt><dd>{% if page.af != '' %}{{ page.af }} km²{% else %}—{% endif %}</dd></div></dl>
+    <h2>Live conditions near the centre of {{ page.n }}</h2>
+    <div class="live-box" id="country-live"><button class="btn btn-sm btn-ghost" data-load-weather>Load live weather &amp; local time</button><p class="muted small">Weather from Open-Meteo for the country's geographic centre; conditions in individual cities will differ.</p></div>
     <h2>Neighbours</h2>
-    {%- if nbs > 0 %}
-    <ul class="link-grid">{% for code in c.b %}{% assign n = all | where: "a3", code | first %}{% if n %}<li><a href="{{ n.slug }}.html">{{ n.f }} {{ n.n }}</a></li>{% endif %}{% endfor %}</ul>
-    {%- else %}
-    <p>{{ c.n }} has no land neighbours{% unless c.ld %} — its borders are entirely maritime{% endunless %}.</p>
-    {%- endif %}
-    {%- if c.rank %}{%- assign rk1 = c.rank | minus: 1 -%}{%- assign rk2 = c.rank | plus: 1 -%}{%- assign lg = all | where: "rank", rk1 | first -%}{%- assign sm = all | where: "rank", rk2 | first %}
-    <p>By area, {{ c.n }} sits between {% if lg %}<a href="{{ lg.slug }}.html">{{ lg.n }}</a> (larger){% else %}no larger country{% endif %} and {% if sm %}<a href="{{ sm.slug }}.html">{{ sm.n }}</a> (smaller){% else %}no smaller entry{% endif %}.</p>
-    {%- endif %}
-    {%- if c.sub != '' %}{%- assign peers = all | where: "sub", c.sub -%}{%- if peers.size > 1 %}
-    <h2>More in {{ c.sub }}</h2>
-    <ul class="link-grid">{% assign k = 0 %}{% for p in peers %}{% if p.a3 != c.a3 and k < 12 %}<li><a href="{{ p.slug }}.html">{{ p.f }} {{ p.n }}</a></li>{% assign k = k | plus: 1 %}{% endif %}{% endfor %}</ul>
-    {%- endif %}{%- endif %}
-    {%- assign nl = c.lang | size -%}{%- assign ncur = c.cur | size %}
+    <div id="c-neighbours"><p class="muted">Loading…</p></div>
+    <div id="c-more"></div>
     <h2>Languages and money</h2>
-    <p>{% if nl > 1 %}The languages recorded as official or widely used in {{ c.n }} are {{ c.lang | join: ', ' }}.{% elsif nl == 1 %}The main language recorded in {{ c.n }} is {{ c.lang[0] }}.{% else %}Language data is not available for this entry.{% endif %} {% if ncur > 0 %}Everyday prices are set in {{ c.cur | join: ' and ' }}.{% endif %} {% if c.idd != '' %}To phone {{ c.n }} from abroad, dial {{ c.idd }} followed by the local number; websites registered there commonly end in {{ c.tld | default: 'the national domain' }}.{% endif %}</p>
+    <p id="c-lang" class="muted">Loading…</p>
     <p class="muted small">Country data: mledoze/countries (ODbL) and Natural Earth. Area figures are official land plus inland water totals and may differ slightly from other sources. Spot an error? <a href="/contact.html">Tell us</a>.</p>
   </article>
   <aside class="side">
-    <div class="card"><h3>Test yourself</h3><p>Can you find {{ c.n }} on a blank map?</p><a class="btn btn-accent btn-block" href="/play/pin.html">Play Pin the Country</a><a class="btn btn-ghost btn-block" href="/play/flags.html">Flag Frenzy</a></div>
-    <div class="card card-lead"><h3>Need maps or imagery of {{ c.n }}?</h3><p>Drone surveys, satellite imagery, GIS analysis and custom cartography — get matched with vetted specialists.</p><a class="btn btn-accent btn-block" href="/projects.html?region={{ c.n | url_encode }}">Get free quotes</a></div>
-    <div class="card"><h3>Distance from you</h3><p>Measure the great-circle distance from your location to {{ c.n }}.</p><a class="btn btn-ghost btn-block" href="/tools/distance.html?to={{ c.ll[0] }},{{ c.ll[1] }}">Open distance tool</a></div>
+    <div class="card"><h3>Test yourself</h3><p>Can you find {{ page.n }} on a blank map?</p><a class="btn btn-accent btn-block" href="/play/pin.html">Play Pin the Country</a><a class="btn btn-ghost btn-block" href="/play/flags.html">Flag Frenzy</a></div>
+    <div class="card card-lead"><h3>Need maps or imagery of {{ page.n }}?</h3><p>Drone surveys, satellite imagery, GIS analysis and custom cartography — get matched with vetted specialists.</p><a class="btn btn-accent btn-block" href="/projects.html?region={{ page.n | url_encode }}">Get free quotes</a></div>
+    <div class="card"><h3>Distance from you</h3><p>Measure the great-circle distance from your location to {{ page.n }}.</p><a class="btn btn-ghost btn-block" id="c-dist" href="/tools/distance.html">Open distance tool</a></div>
   </aside>
 </section>

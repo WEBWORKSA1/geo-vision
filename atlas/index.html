@@ -1,12 +1,13 @@
 ---
 layout: default
+country: false
 title: "World Atlas — every country, capital & flag"
 description: "Free interactive world atlas: 250 countries and territories with capitals, flags, maps, borders, languages, currencies and size rankings."
 scripts: ["atlas"]
 ---
-{%- assign all = site.data.countries -%}
+{%- assign all = site.pages | where: "country", true | sort: "n" -%}
 {%- assign regions = all | group_by: "reg" | sort: "name" -%}
-{%- assign ranked = all | sort: "rank", "last" -%}
+{%- assign ranked = all | sort: "area" | reverse -%}
 <section class="page-hero"><div class="wrap">
   <p class="eyebrow">World atlas</p>
   <h1>{{ all | size }} countries &amp; territories</h1>
@@ -15,6 +16,6 @@ scripts: ["atlas"]
   <p class="chips">{% for r in regions %}<a class="chip" href="#{{ r.name | default: 'other' | slugify }}">{{ r.name | default: 'Other' }}</a>{% endfor %}</p>
 </div></section>
 <section class="wrap">
-  <div class="card"><h2>The 10 largest countries by area</h2><ol class="rank-list">{% for c in ranked limit: 10 %}<li><a href="{{ c.slug }}.html">{{ c.f }} {{ c.n }}</a><span>{{ c.af }} km²</span></li>{% endfor %}</ol></div>
-  {% for r in regions %}<section class="atlas-region" id="{{ r.name | default: 'other' | slugify }}"><h2>{{ r.name | default: 'Other' }} <small>{{ r.size }}</small></h2><ul class="link-grid">{% for c in r.items %}<li data-name="{{ c.n | downcase | escape }} {{ c.cap | downcase | escape }}"><a href="{{ c.slug }}.html">{{ c.f }} {{ c.n }}<small>{{ c.cap }}</small></a></li>{% endfor %}</ul></section>{% endfor %}
+  <div class="card"><h2>The 10 largest countries by area</h2><ol class="rank-list">{% for c in ranked limit: 10 %}<li><a href="{{ c.url }}">{{ c.f }} {{ c.n }}</a><span>{{ c.af }} km²</span></li>{% endfor %}</ol></div>
+  {% for r in regions %}<section class="atlas-region" id="{{ r.name | default: 'other' | slugify }}"><h2>{{ r.name | default: 'Other' }} <small>{{ r.size }}</small></h2><ul class="link-grid">{% for c in r.items %}<li data-name="{{ c.n | downcase | escape }} {{ c.cap | downcase | escape }}"><a href="{{ c.url }}">{{ c.f }} {{ c.n }}<small>{{ c.cap }}</small></a></li>{% endfor %}</ul></section>{% endfor %}
 </section>

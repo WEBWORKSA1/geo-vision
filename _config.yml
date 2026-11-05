@@ -20,3 +20,8 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "atlas"
+    values:
+      layout: country
+      country: true
