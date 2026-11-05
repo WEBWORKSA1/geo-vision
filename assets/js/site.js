@@ -119,7 +119,24 @@
   GV.haversine = (a, b) => { const R = 6371.0088, r = Math.PI / 180; const dLat = (b[0] - a[0]) * r, dLon = (b[1] - a[1]) * r; const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLon / 2) ** 2; return 2 * R * Math.asin(Math.min(1, Math.sqrt(h))); };
   GV.bearing = (a, b) => { const r = Math.PI / 180; const y = Math.sin((b[1] - a[1]) * r) * Math.cos(b[0] * r); const x = Math.cos(a[0] * r) * Math.sin(b[0] * r) - Math.sin(a[0] * r) * Math.cos(b[0] * r) * Math.cos((b[1] - a[1]) * r); return (Math.atan2(y, x) / r + 360) % 360; };
   GV.arrow = (deg) => ['⬆️', '↗️', '➡️', '↘️', '⬇️', '↙️', '⬅️', '↖️'][Math.round(deg / 45) % 8];
-  const getJSON = (p) => fetch(GV.root + p).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  // Country facts: mledoze/countries (ODbL) from the world-countries package on jsDelivr, reduced to the fields the site uses.
+  const slugify = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  let countriesP = null;
+  const loadCountries = async () => {
+    const raw = await fetch('https://cdn.jsdelivr.net/npm/world-countries@5.1.0/dist/countries.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    const used = new Set();
+    const list = raw.map((c) => {
+      let slug = slugify(c.name.common); if (used.has(slug)) slug += '-' + c.cca3.toLowerCase(); used.add(slug);
+      const sfx = (c.idd && c.idd.suffixes) || [];
+      return { n: c.name.common, o: c.name.official, a3: c.cca3, a2: c.cca2, num: c.ccn3 || '', slug, cap: (c.capital || []).join(', '), reg: c.region || '', sub: c.subregion || '',
+        ll: c.latlng || [0, 0], area: c.area > 0 ? c.area : 0, b: c.borders || [], ld: !!c.landlocked, ind: !!c.independent, un: !!c.unMember, f: c.flag || '',
+        lang: Object.values(c.languages || {}), cur: Object.entries(c.currencies || {}).map(([k, v]) => `${v.name} (${k})`), tld: (c.tld || []).join(', '),
+        idd: c.idd && c.idd.root ? c.idd.root + (sfx.length === 1 ? sfx[0] : '') : '', dem: c.demonyms && c.demonyms.eng ? c.demonyms.eng.m : '' };
+    }).sort((x, y) => x.n.localeCompare(y.n));
+    [...list].filter((c) => c.area).sort((x, y) => y.area - x.area).forEach((c, i) => { c.rank = i + 1; });
+    return list;
+  };
+  const getJSON = (p) => (p === 'data/countries.json' ? (countriesP = countriesP || loadCountries()) : fetch(GV.root + p).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }));
   // Country shapes: Natural Earth 1:110m via the world-atlas package on jsDelivr, joined to our country list by ISO numeric code.
   let worldP = null;
   const loadWorld = async () => {
