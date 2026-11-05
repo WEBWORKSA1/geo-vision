@@ -1,0 +1,45 @@
+<!--META {"slug":"latitude-longitude-explained","cat":"Coordinates","updated":"2026-11-05","title":"Latitude and Longitude Explained: Coordinates, Formats & Precision","h1":"Latitude and longitude explained","desc":"How the global coordinate grid works, how far a degree is, decimal vs DMS formats, how many decimal places you need, datums like WGS84 and common mistakes to avoid."} -->
+<p>Every place on Earth can be described with two numbers. Latitude and longitude form a grid wrapped around the globe, and understanding it is the foundation of maps, GPS, GIS and every location-aware app.</p>
+
+<h2>Latitude: north and south</h2>
+<p>Latitude measures how far north or south of the equator a point is, from 0° at the equator to 90° at the North Pole and −90° (90° S) at the South Pole. Lines of equal latitude are called <b>parallels</b> because they never meet. Important parallels include the Tropics of Cancer and Capricorn (about 23.4° N and S), where the Sun can be directly overhead at a solstice, and the Arctic and Antarctic Circles (about 66.6°), beyond which the midnight sun and polar night occur. Try our <a href="../tools/sun.html">sunrise and sunset calculator</a> at different latitudes to see the effect.</p>
+<p>One degree of latitude is always about <b>111 km</b> (69 miles), varying only slightly because Earth is not a perfect sphere.</p>
+
+<h2>Longitude: east and west</h2>
+<p>Longitude measures how far east or west a point is from the <b>prime meridian</b>, from 0° to 180° east (positive) or west (negative). Lines of equal longitude are <b>meridians</b>; they run pole to pole and converge at the poles. The prime meridian through the Royal Observatory at Greenwich, London, was adopted as the international reference at the 1884 International Meridian Conference.</p>
+<p>Because meridians converge, the length of a degree of longitude shrinks with latitude: about 111 km at the equator, about 79 km at 45°, about 56 km at 60°, and zero at the poles. Its length is roughly 111 km × cos(latitude).</p>
+
+<h2>Formats you'll see</h2>
+<table><thead><tr><th>Format</th><th>Example (Eiffel Tower)</th><th>Where it's used</th></tr></thead><tbody>
+<tr><td>Decimal degrees (DD)</td><td>48.8584, 2.2945</td><td>Apps, APIs, spreadsheets, GIS</td></tr>
+<tr><td>Degrees, minutes, seconds (DMS)</td><td>48° 51′ 30″ N, 2° 17′ 40″ E</td><td>Charts, aviation, older maps</td></tr>
+<tr><td>Degrees and decimal minutes</td><td>48° 51.504′ N, 2° 17.670′ E</td><td>Marine GPS, geocaching</td></tr>
+<tr><td>UTM</td><td>31U 448252E 5411955N</td><td>Topographic maps, surveying, military</td></tr>
+</tbody></table>
+<p>Convert between all of these instantly with our <a href="../tools/coordinates.html">coordinate converter</a>. To convert DMS to decimal: degrees + minutes ÷ 60 + seconds ÷ 3600, then make the value negative for south or west.</p>
+
+<h2>How many decimal places do you need?</h2>
+<table><thead><tr><th>Decimals</th><th>Precision at the equator</th><th>Good for</th></tr></thead><tbody>
+<tr><td>1 (48.9)</td><td>≈ 11 km</td><td>A city or region</td></tr>
+<tr><td>2 (48.86)</td><td>≈ 1.1 km</td><td>A town or neighbourhood</td></tr>
+<tr><td>3 (48.858)</td><td>≈ 110 m</td><td>A large field or campus</td></tr>
+<tr><td>4 (48.8584)</td><td>≈ 11 m</td><td>A building or parcel</td></tr>
+<tr><td>5 (48.85837)</td><td>≈ 1.1 m</td><td>A tree or doorway; typical phone GPS</td></tr>
+<tr><td>6</td><td>≈ 11 cm</td><td>Survey-grade work</td></tr>
+</tbody></table>
+<p>Quoting eight or more decimals from a phone is false precision — consumer GPS is usually accurate to a few metres.</p>
+
+<h2>Datums: which Earth are we measuring?</h2>
+<p>Coordinates only make sense relative to a <b>datum</b>, a mathematical model of Earth's size and shape and its position. GPS uses <b>WGS84</b>, and most web maps assume it. Many countries also maintain national datums (for example NAD83 in North America or ETRS89 in Europe) that are tied to their tectonic plate, so coordinates don't drift as continents move. The differences between modern datums are often under two metres but can reach hundreds of metres for older local datums — which matters greatly for surveying and engineering.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><b>Swapping the order.</b> People usually say "latitude, longitude", but some formats, including GeoJSON and many GIS tools, store <i>longitude, latitude</i>. A swapped pair can land you in the ocean or on the other side of the world.</li>
+<li><b>Dropping the minus sign.</b> Everything in the Americas has negative longitude; everything in the Southern Hemisphere has negative latitude.</li>
+<li><b>Mixing formats.</b> 48.30 in decimal degrees is not 48° 30′.</li>
+<li><b>Ignoring the datum</b> when combining survey data from different sources.</li>
+</ul>
+
+<h2>Beyond latitude and longitude</h2>
+<p>Other systems encode locations for specific needs: geohashes and other grid codes turn coordinates into short strings for databases, national grids such as the British National Grid simplify local measurement, and postal addresses link coordinates to human-friendly names. Whatever the system, it all traces back to the global grid of parallels and meridians.</p>
+<p>Want to see how far apart two coordinates are? Use the <a href="../tools/distance.html">distance calculator</a>.</p>

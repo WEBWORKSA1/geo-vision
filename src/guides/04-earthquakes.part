@@ -1,0 +1,48 @@
+<!--META {"slug":"earthquakes-explained","cat":"Earth science","updated":"2026-11-05","title":"Earthquakes Explained: Magnitude, Intensity, Depth & Where They Happen","h1":"Earthquakes explained: magnitude, intensity and where they strike","desc":"What causes earthquakes, how magnitude and intensity differ, why each step on the scale is about 32 times more energy, where quakes cluster, and how to stay safe."} -->
+<p>Somewhere on Earth the ground is shaking right now. Most quakes are far too small to feel, but a few each year are powerful enough to reshape coastlines. Open the <a href="../live.html">Live Earth map</a> in another tab and you'll see the past day's events as you read.</p>
+
+<h2>What causes an earthquake?</h2>
+<p>Earth's outer shell, the lithosphere, is broken into tectonic plates that move a few centimetres a year — about as fast as fingernails grow. Where plates meet, friction locks the edges together while the plates keep moving, so stress builds in the rock. When the stress exceeds the strength of the fault, the rock suddenly slips and releases stored energy as seismic waves. The point underground where slip begins is the <b>hypocentre</b> (or focus); the point on the surface directly above is the <b>epicentre</b>.</p>
+<p>There are three main kinds of plate boundary:</p>
+<ul>
+<li><b>Convergent</b> — plates collide, and one may dive beneath another (subduction). These produce the largest earthquakes and most tsunamis, such as Chile 1960 and Japan 2011.</li>
+<li><b>Divergent</b> — plates pull apart, as along the Mid-Atlantic Ridge and in Iceland and East Africa.</li>
+<li><b>Transform</b> — plates slide past each other, as along California's San Andreas Fault or Türkiye's North Anatolian Fault.</li>
+</ul>
+
+<h2>Magnitude: how much energy was released</h2>
+<p>News reports usually quote the <b>moment magnitude</b> (Mw), the scale seismologists use today. It replaced Charles Richter's 1935 local scale, which saturated for very large quakes, though people still say "Richter scale" informally. Moment magnitude is based on the area of the fault that slipped, how far it slipped and the stiffness of the rock.</p>
+<p>The scale is logarithmic. Each whole step means about <b>10 times more ground motion</b> on a seismogram and about <b>32 times more energy</b>. So a magnitude 7 releases roughly 1,000 times the energy of a magnitude 5.</p>
+<table><thead><tr><th>Magnitude</th><th>Typical effects</th><th>Rough frequency worldwide</th></tr></thead><tbody>
+<tr><td>Below 2.5</td><td>Usually not felt; recorded by instruments</td><td>Roughly a million per year</td></tr>
+<tr><td>2.5–5.4</td><td>Often felt; minor damage at most</td><td>Hundreds of thousands per year</td></tr>
+<tr><td>5.5–6.0</td><td>Slight damage to buildings</td><td>Several hundred per year</td></tr>
+<tr><td>6.1–6.9</td><td>Can be destructive in populated areas</td><td>About 100 per year</td></tr>
+<tr><td>7.0–7.9</td><td>Major earthquake; serious damage</td><td>About 10–20 per year</td></tr>
+<tr><td>8.0 and above</td><td>Great earthquake; can devastate communities near the epicentre</td><td>About one every year or two</td></tr>
+</tbody></table>
+<p>The largest earthquake ever recorded was the magnitude 9.5 Valdivia earthquake in Chile in 1960.</p>
+
+<h2>Intensity: how strongly it was felt</h2>
+<p>Magnitude is one number per earthquake. <b>Intensity</b> describes shaking at a particular place and varies with distance, depth and local ground. It is measured on the Modified Mercalli Intensity scale, written in Roman numerals from I (not felt) to X and above (extreme). Soft sediments and reclaimed land amplify shaking, which is why two neighbourhoods the same distance from the epicentre can suffer very differently. The USGS "Did You Feel It?" system builds intensity maps from public reports.</p>
+
+<h2>Why depth matters</h2>
+<p>Earthquakes are classed as shallow (0–70 km), intermediate (70–300 km) or deep (300–700 km). A shallow quake delivers its energy close to the surface and is usually far more damaging than a deep one of the same magnitude. Deep earthquakes occur only where a subducting plate sinks into the mantle, such as beneath Fiji–Tonga or Indonesia. Our live map lists depth for every event.</p>
+
+<h2>Where earthquakes cluster</h2>
+<p>Plot a week of quakes and the plate boundaries draw themselves. The <b>Pacific Ring of Fire</b> — from New Zealand through Indonesia, Japan, Alaska and down the Americas to Chile — hosts roughly 80% of the world's largest earthquakes. The <b>Alpine–Himalayan belt</b> runs from the Mediterranean through Iran and the Himalaya to Southeast Asia. A smaller number of quakes occur inside plates, such as the 1811–1812 New Madrid earthquakes in the central United States.</p>
+
+<h2>Aftershocks, foreshocks and prediction</h2>
+<p>Large earthquakes are followed by aftershocks — smaller quakes as the crust adjusts — which can continue for months and occasionally be damaging themselves. Sometimes a quake turns out to be a foreshock to a larger one, but there is no reliable way to tell in advance. Scientists cannot predict the exact time and place of an earthquake; they <i>forecast</i> probabilities over years and decades, and some countries run early-warning systems that give seconds of notice once shaking has started.</p>
+
+<h2>Tsunamis</h2>
+<p>When a large undersea earthquake lifts or drops the seafloor, it displaces the water column above and can generate a tsunami. In deep water the wave travels at jet-aircraft speeds but is barely noticeable; it grows dramatically as it reaches shallow coasts. If you are on a coast and feel strong or long shaking, or see the sea suddenly retreat, move to high ground immediately without waiting for an official warning.</p>
+
+<h2>Staying safe</h2>
+<ul>
+<li><b>Drop, Cover and Hold On</b> during shaking: get down, take cover under a sturdy table, and hold on until it stops.</li>
+<li>Stay away from windows and heavy objects that could fall. Don't run outside during shaking.</li>
+<li>Secure bookcases and water heaters; keep water, food, a torch and a first-aid kit ready.</li>
+<li>Follow your national geological or emergency agency for official information.</li>
+</ul>
+<p>Engineers, insurers and planners: seismic hazard and exposure mapping is a core GIS application. <a href="../projects.html?service=Environmental%20%2F%20risk%20mapping">Request a risk-mapping quote</a>.</p>
