@@ -1,4 +1,4 @@
-{%- if page.slug -%}{%- assign cc = site.data.countries | where: "slug", page.slug | first -%}{%- capture gv_title -%}{{ cc.n }} — map, capital, facts & live weather{%- endcapture -%}{%- capture gv_desc -%}{{ cc.n }}: capital {{ cc.cap | default: 'n/a' }}{% if cc.af != '' %}, {{ cc.af }} km²{% endif %}, languages, currency, neighbours, map and live local conditions. Free world atlas from Geo.Vision.{%- endcapture -%}{%- assign gv_scripts = "leaflet,country" | split: "," -%}{%- else -%}{%- assign gv_title = page.title -%}{%- assign gv_desc = page.description -%}{%- assign gv_scripts = page.scripts -%}{%- endif -%}
+{%- if page.country -%}{%- capture gv_title -%}{{ page.n }} — map, capital, facts & live weather{%- endcapture -%}{%- capture gv_desc -%}{{ page.n }}: capital {{ page.cap | default: 'n/a' }}{% if page.af != '' %}, {{ page.af }} km²{% endif %}, languages, currency, neighbours, map and live local conditions. Free world atlas from Geo.Vision.{%- endcapture -%}{%- assign gv_scripts = "leaflet,country" | split: "," -%}{%- else -%}{%- assign gv_title = page.title -%}{%- assign gv_desc = page.description -%}{%- assign gv_scripts = page.scripts -%}{%- endif -%}
 {%- if gv_title contains 'Geo.Vision' -%}{%- assign gv_full = gv_title -%}{%- else -%}{%- capture gv_full -%}{{ gv_title }} | Geo.Vision{%- endcapture -%}{%- endif -%}
 {%- capture gv_canon -%}{{ site.url }}{{ page.url | replace: 'index.html', '' }}{%- endcapture -%}
 <!DOCTYPE html>
@@ -30,8 +30,8 @@
 {%- unless page.noads %}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
 {%- endunless %}
-{%- if page.slug %}
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Place","name":{{ cc.n | jsonify }},"geo":{"@type":"GeoCoordinates","latitude":{{ cc.ll[0] }},"longitude":{{ cc.ll[1] }}},"url":"{{ gv_canon }}"}</script>
+{%- if page.country %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Place","name":{{ page.n | jsonify }},"url":"{{ gv_canon }}"}</script>
 {%- elsif page.schema %}
 <script type="application/ld+json">{{ page.schema }}</script>
 {%- endif %}
