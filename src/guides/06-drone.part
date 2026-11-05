@@ -1,0 +1,66 @@
+<!--META {"slug":"hiring-a-drone-mapping-service","cat":"Drones","updated":"2026-11-05","title":"How to Hire a Drone Mapping Service: Deliverables, Accuracy, Cost & Red Flags","h1":"How to hire a drone mapping service","desc":"A buyer's guide to drone mapping and aerial surveys: deliverables, ground sampling distance, accuracy, RTK and ground control, regulations, what drives cost and questions to ask."} -->
+<p>Drones have made aerial mapping fast and affordable for construction sites, farms, quarries, solar farms, roofs, real estate and environmental projects. But "drone mapping" covers everything from a few nice photos to survey-grade 3D data. This guide helps you specify what you actually need, compare quotes fairly and avoid expensive surprises.</p>
+
+<h2>Step 1: Decide what you need to <i>decide</i></h2>
+<p>Start with the decision the data will support, not the technology. "We need to calculate stockpile volumes monthly for inventory" leads to a very different job than "we need a marketing video of the property" or "we need a topographic survey to design drainage". Write one or two sentences describing the decision, who will use the data and in which software. That paragraph is the most valuable part of any brief.</p>
+
+<h2>Step 2: Know the common deliverables</h2>
+<table><thead><tr><th>Deliverable</th><th>What it is</th><th>Typical use</th></tr></thead><tbody>
+<tr><td>Orthomosaic</td><td>A single, geometrically corrected aerial image stitched from hundreds of photos</td><td>Site plans, progress tracking, base maps</td></tr>
+<tr><td>Digital surface / terrain model (DSM / DTM)</td><td>Elevation rasters with or without buildings and vegetation</td><td>Drainage design, earthworks, flood analysis</td></tr>
+<tr><td>Point cloud</td><td>Millions of 3D points from photogrammetry or LiDAR</td><td>As-built checks, BIM, detailed 3D measurement</td></tr>
+<tr><td>Contours</td><td>Lines of equal elevation derived from the terrain model</td><td>Engineering and planning drawings</td></tr>
+<tr><td>Volumetrics</td><td>Calculated volumes of stockpiles or cut-and-fill</td><td>Mining, aggregates, construction billing</td></tr>
+<tr><td>3D mesh / model</td><td>A textured 3D model of buildings or terrain</td><td>Inspection, visualisation, heritage</td></tr>
+<tr><td>Multispectral / NDVI maps</td><td>Crop-health indices from specialised cameras</td><td>Precision agriculture, forestry</td></tr>
+<tr><td>Thermal maps</td><td>Surface temperature imagery</td><td>Solar panel faults, roof leaks, search and rescue</td></tr>
+</tbody></table>
+<p>Ask for data in formats your team can open: GeoTIFF for imagery and elevation, LAS/LAZ for point clouds, DXF or DWG for CAD, OBJ for meshes, and a coordinate system that matches your existing drawings.</p>
+
+<h2>Step 3: Understand resolution and accuracy</h2>
+<p><b>Ground sampling distance (GSD)</b> is the size of one image pixel on the ground, usually 1–5 cm for mapping drones. Smaller GSD means more detail but more flight time and processing.</p>
+<p><b>Accuracy</b> comes in two flavours. <i>Relative</i> accuracy is how well measurements agree within the map — fine for measuring a distance or volume on site. <i>Absolute</i> accuracy is how well the map lines up with real-world coordinates — essential if the data will be combined with engineering designs or legal boundaries. Achieving centimetre-level absolute accuracy normally requires either <b>ground control points (GCPs)</b> surveyed with GNSS equipment, or a drone with <b>RTK/PPK</b> positioning, plus independent check points to prove the result. Ask providers to state expected accuracy and how they will verify it in a short report.</p>
+<div class="callout"><b>Survey vs. map:</b> in many jurisdictions, legal boundary and certain topographic surveys must be certified by a licensed land surveyor. A drone pilot can collect data, but only a qualified surveyor can sign a survey.</div>
+
+<h2>Step 4: Check credentials and compliance</h2>
+<ul>
+<li><b>Pilot certification.</b> Commercial drone flights are regulated almost everywhere: for example, the FAA's Part 107 rules in the United States, Transport Canada's pilot certificates in Canada, and the UK CAA and EU EASA frameworks in Europe. Ask for the pilot's certificate and drone registration.</li>
+<li><b>Insurance.</b> Request proof of liability insurance at a level appropriate for your site.</li>
+<li><b>Airspace and permissions.</b> Near airports, heliports, crowds or controlled airspace, authorisations may be needed in advance. A professional handles this.</li>
+<li><b>Site safety.</b> Confirm site inductions, PPE, and how they will coordinate with cranes, traffic or livestock.</li>
+<li><b>Privacy.</b> Make sure neighbours' privacy is respected and images of people are handled appropriately.</li>
+</ul>
+
+<h2>Step 5: Understand what drives the price</h2>
+<p>Quotes vary widely because jobs vary widely. The main cost drivers are:</p>
+<ul>
+<li><b>Area and complexity</b> — a flat field is quicker than a steep quarry or a dense urban block.</li>
+<li><b>Accuracy</b> — survey-grade work with GCPs, RTK and check-point reports costs more than visual mapping.</li>
+<li><b>Deliverables</b> — each extra product (contours, CAD linework, classified point clouds) adds processing time.</li>
+<li><b>Sensors</b> — LiDAR, multispectral and thermal payloads cost more than standard RGB cameras.</li>
+<li><b>Travel and mobilisation</b> — remote sites and repeat visits add cost; recurring monthly flights are often discounted.</li>
+<li><b>Turnaround</b> — rush delivery costs extra.</li>
+</ul>
+<p>Small single-visit jobs from a local operator can be modest, while large or survey-grade projects can run well into the thousands or more. The only reliable way to know is to compare two or three detailed quotes based on the same written brief.</p>
+
+<h2>Questions to ask every provider</h2>
+<ol>
+<li>Can you show a sample deliverable from a similar project?</li>
+<li>What GSD and absolute accuracy will you deliver, and how will you prove it?</li>
+<li>Which coordinate system and file formats will you provide?</li>
+<li>Who processes the data, and with which software?</li>
+<li>What happens if weather delays the flight?</li>
+<li>How long do you keep raw data, and can we have it?</li>
+<li>Are permits, insurance and site safety included in the price?</li>
+</ol>
+
+<h2>Red flags</h2>
+<ul>
+<li>No proof of certification or insurance.</li>
+<li>Promising "survey-grade" accuracy without GCPs, RTK/PPK or check points.</li>
+<li>Vague deliverables ("a 3D map") with no formats or coordinate system.</li>
+<li>Prices far below everyone else's with no explanation.</li>
+</ul>
+
+<h2>Get matched in minutes</h2>
+<p>Write your brief once and we'll introduce you to up to three drone mapping specialists who cover your area. <a href="../projects.html?service=Drone%20mapping%20%2F%20aerial%20survey">Start your drone mapping brief</a> — free and with no obligation.</p>

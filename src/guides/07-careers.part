@@ -1,0 +1,45 @@
+<!--META {"slug":"careers-in-geospatial","cat":"Careers","updated":"2026-11-05","title":"Careers in Geospatial: GIS, Remote Sensing, Cartography & Drones","h1":"Careers in geospatial: roles, skills and how to get started","desc":"An overview of geospatial careers — GIS analyst, developer, remote sensing scientist, cartographer, surveyor and drone pilot — with the skills, tools and portfolio steps that get you hired."} -->
+<p>Location data now underpins logistics, energy, insurance, agriculture, public health, defence, climate science and the apps on your phone. That has turned "geospatial" from a niche into a broad career field with roles for analysts, developers, scientists, designers and field specialists. Here is a map of the territory.</p>
+
+<h2>The main roles</h2>
+<table><thead><tr><th>Role</th><th>What you do</th><th>Core tools</th></tr></thead><tbody>
+<tr><td>GIS technician</td><td>Create, edit and maintain spatial data and produce maps</td><td>QGIS, ArcGIS Pro, editing workflows</td></tr>
+<tr><td>GIS analyst</td><td>Answer questions with spatial analysis; build reports and dashboards</td><td>ArcGIS/QGIS, SQL, Python, BI tools</td></tr>
+<tr><td>GIS / geospatial developer</td><td>Build web maps, APIs and data pipelines</td><td>JavaScript (Leaflet, MapLibre, OpenLayers), Python, PostGIS, cloud</td></tr>
+<tr><td>Geospatial data scientist</td><td>Model spatial patterns, apply machine learning to location data and imagery</td><td>Python (GeoPandas, scikit-learn), notebooks, Earth Engine</td></tr>
+<tr><td>Remote sensing analyst / scientist</td><td>Process and interpret satellite, aerial and drone imagery</td><td>GDAL, Rasterio, SNAP, ENVI, Earth Engine</td></tr>
+<tr><td>Cartographer</td><td>Design clear, beautiful maps for print, web and publications</td><td>QGIS/ArcGIS layouts, Illustrator, Mapbox Studio</td></tr>
+<tr><td>Land surveyor</td><td>Measure and certify boundaries and terrain; usually a licensed profession</td><td>GNSS receivers, total stations, CAD</td></tr>
+<tr><td>Drone pilot / photogrammetrist</td><td>Plan and fly mapping missions and process the imagery</td><td>Flight planning apps, Pix4D, Agisoft Metashape, DJI Terra</td></tr>
+</tbody></table>
+
+<h2>Skills that matter most</h2>
+<ul>
+<li><b>Spatial thinking</b> — coordinate systems, projections, scale and the right analysis for the question. Our guides to <a href="map-projections-explained.html">projections</a> and <a href="latitude-longitude-explained.html">coordinates</a> cover the basics.</li>
+<li><b>One desktop GIS, deeply</b> — QGIS (free) or ArcGIS Pro. Employers care more about what you have built than which logo is on it.</li>
+<li><b>SQL</b> — especially spatial SQL in PostGIS. It's the most underrated skill in the field.</li>
+<li><b>Python</b> — for automation, analysis and imagery processing. Even a little scripting multiplies your productivity.</li>
+<li><b>Communication</b> — turning analysis into a map, chart or one-page summary a decision-maker understands.</li>
+<li><b>Domain knowledge</b> — the best analysts understand the business they serve: utilities, agriculture, insurance, ecology or transport.</li>
+</ul>
+
+<h2>Education and certification</h2>
+<p>Many people enter with a degree in geography, environmental science, geology, urban planning, computer science or engineering, sometimes followed by a GIS certificate or master's degree. Others are self-taught or switch careers through online courses and portfolios. Recognised credentials include the <b>GISP</b> certification from the GIS Certification Institute and vendor exams such as Esri's technical certifications. Surveying usually requires a specific degree, supervised experience and a state, provincial or national licence. Drone work requires a commercial pilot certificate from your aviation authority.</p>
+
+<h2>Build a portfolio that gets interviews</h2>
+<ol>
+<li><b>Pick three questions you care about</b> — for example: Which neighbourhoods in my city are farthest from a park? Where did a recent wildfire burn, and how fast is vegetation recovering? Where should a new EV charger go?</li>
+<li><b>Use real, open data</b> — OpenStreetMap, census data, Sentinel-2 or Landsat imagery.</li>
+<li><b>Show the whole workflow</b> — data sources, cleaning, analysis, a well-designed map and a short written conclusion.</li>
+<li><b>Publish it</b> — a simple website or GitHub repository with an interactive web map stands out.</li>
+<li><b>Enter contests</b> — our <a href="../contests.html">Monthly Map Challenge</a> is a low-pressure way to build work and get feedback.</li>
+</ol>
+
+<h2>Pay and job outlook</h2>
+<p>Pay varies enormously by country, sector and specialism. In general, roles that combine GIS with programming, data science or engineering earn more than map-production roles, and private-sector technology and energy roles pay more than many public-sector positions. For reliable figures, consult official sources such as the U.S. Bureau of Labor Statistics <i>Occupational Outlook Handbook</i> (see "Cartographers and Photogrammetrists" and "Surveyors"), national statistics agencies, and recent salary surveys from professional associations.</p>
+
+<h2>Where the jobs are</h2>
+<ul><li>Local, regional and national government (planning, utilities, emergency services)</li><li>Engineering, construction and environmental consultancies</li><li>Energy and utilities, including renewables</li><li>Insurance, finance and real estate</li><li>Technology and logistics companies</li><li>NGOs, research institutes and universities</li></ul>
+
+<h2>Work with us</h2>
+<p>Geo.Vision pays freelance writers, GIS contributors, developers and video creators. See <a href="../careers.html">open roles</a>. Already running a geospatial business? <a href="../projects.html#providers">Join our provider network</a> to receive client briefs.</p>
