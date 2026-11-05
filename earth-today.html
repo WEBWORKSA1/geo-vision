@@ -1,0 +1,9 @@
+---
+layout: "default"
+title: "Earth Today — daily briefing on earthquakes, wildfires & storms"
+description: "Auto-updated daily briefing: the week's strongest earthquakes and every open wildfire, storm, volcano and flood tracked by NASA, with links to official sources."
+scripts: ["earth"]
+schema: "{\"@context\": \"https://schema.org\", \"@type\": \"Dataset\", \"name\": \"Geo.Vision Earth Today\", \"description\": \"Daily digest of significant earthquakes (USGS) and open natural events (NASA EONET).\", \"creator\": {\"@type\": \"Organization\", \"name\": \"Geo.Vision\"}, \"isAccessibleForFree\": true}"
+---
+{% assign ET_QUAKES = '<li id="et-quakes" class="muted">Loading live data from USGS…</li>' %}{% assign ET_CATS = '<span class="chip" id="et-cats">Loading NASA EONET…</span>' %}{% assign ET_EVENTS = '<li id="et-events" class="muted">Loading open natural events…</li>' %}{% assign ET_WHEN = '<span id="et-when">live</span>' %}{% assign ET_QCOUNT = '<span id="et-qcount">…</span>' %}
+{% include pages/earth-today.part %}
