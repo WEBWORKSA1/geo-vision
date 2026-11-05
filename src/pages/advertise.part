@@ -1,0 +1,27 @@
+<!--META {"out":"advertise.html","title":"Advertise, sponsor & partner with Geo.Vision","desc":"Reach students, teachers, travellers and geospatial professionals. Sponsorships, newsletter placements, game and contest sponsorship, partnerships and domain inquiries."} -->
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Advertise · Sponsor · Partner</p><h1>Put your brand on the map</h1><p class="lede">Geo.Vision reaches curious, educated audiences every day: students and teachers, travellers, quiz lovers, and professionals in GIS, drones, energy, construction and insurance.</p><p><a class="btn btn-sun" href="https://web.works/contact" target="_blank" rel="noopener">Interested in this website or domain name? Contact us</a></p></div></section>
+<section class="wrap">
+  <div class="grid-3">
+    <div class="card tier"><h3>Newsletter sponsor</h3><p class="muted">The Daily Orbit</p><ul><li>Native "presented by" slot in the daily email</li><li>Logo, 50-word message and link</li><li>Weekly or monthly bookings</li></ul></div>
+    <div class="card tier featured"><span class="badge">High impact</span><h3>Game sponsor</h3><p class="muted">Daily Outline · Flag Frenzy · Pin</p><ul><li>"Today's puzzle is presented by…" placement</li><li>Branded share card and results screen</li><li>Custom themed rounds for launches</li></ul></div>
+    <div class="card tier" id="sponsor"><h3>Contest &amp; prize sponsor</h3><p class="muted">Monthly Map Challenge</p><ul><li>Named prize, product or cash pool</li><li>Credits on contest page, emails and social posts</li><li>Winner content you may reuse (with consent)</li></ul></div>
+    <div class="card tier"><h3>Section sponsor</h3><p class="muted">Live Earth · Atlas · Tools</p><ul><li>Clearly labelled sponsor credit on a section</li><li>Ideal for data, satellite, drone and GIS brands</li></ul></div>
+    <div class="card tier"><h3>Sponsored guide</h3><p class="muted">Educational content</p><ul><li>Expert-written, clearly labelled "Sponsored"</li><li>Editorial standards apply — no false claims</li></ul></div>
+    <div class="card tier"><h3>Partnerships</h3><p class="muted">Education · Data · Media</p><ul><li>Classroom programmes, data integrations, co-branded tools, white-label quizzes</li><li>Referral partnerships for geospatial providers</li></ul></div>
+  </div>
+  <p class="notice" style="margin-top:1.5rem">All sponsored placements are clearly labelled as sponsored or advertising and are separate from Google AdSense ad units. We don't accept advertising for gambling, weapons, adult content, tobacco or misleading products.</p>
+</section>
+<section class="wrap" id="inquiry">
+  <div class="form-card" style="max-width:820px;margin-inline:auto">
+    <h2>Make an inquiry</h2>
+    <form data-form="advertise" data-subject="Geo.Vision ADVERTISING / PARTNERSHIP inquiry" data-ok="Thanks! We'll send a media kit and availability within two business days.">
+      <div class="row2"><div class="field"><label for="ad-name">Name</label><input id="ad-name" name="name" required></div><div class="field"><label for="ad-email">Work email</label><input id="ad-email" type="email" name="email" required></div></div>
+      <div class="row2"><div class="field"><label for="ad-co">Company</label><input id="ad-co" name="company" required></div><div class="field"><label for="ad-web">Website</label><input id="ad-web" type="url" name="website" placeholder="https://"></div></div>
+      <div class="row2"><div class="field"><label for="ad-type">Interest</label><select id="ad-type" name="interest" required><option value="">Choose…</option><option>Newsletter sponsorship</option><option>Game sponsorship</option><option>Contest / prize sponsorship</option><option>Section sponsorship</option><option>Sponsored guide</option><option>Partnership</option><option>Website / domain acquisition</option></select></div><div class="field"><label for="ad-budget">Budget (optional)</label><select id="ad-budget" name="budget"><option>Not sure</option><option>Under $500</option><option>$500–2,000</option><option>$2,000–10,000</option><option>$10,000+</option></select></div></div>
+      <div class="field"><label for="ad-msg">Goals and timing</label><textarea id="ad-msg" name="message" required></textarea></div>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-accent btn-block" type="submit">Send inquiry</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

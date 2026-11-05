@@ -1,0 +1,29 @@
+<!--META {"out":"careers.html","title":"Careers at Geo.Vision — remote writing, GIS, dev & video roles","desc":"Join Geo.Vision: remote, flexible paid roles for geography writers, GIS contributors, front-end developers, video creators and community managers."} -->
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Careers</p><h1>Help millions understand the planet</h1><p class="lede">We're a small, remote-first team building the friendliest place on the web to explore Earth. Contributors are paid per project or on retainer, work flexible hours and get public credit for their work.</p></div></section>
+<section class="wrap">
+  <h2>Open roles</h2>
+  <div class="grid-2">
+    <div class="card"><span class="chip chip-sm">Freelance · Remote</span><h3 style="margin-top:.6rem">Geography &amp; Earth-science writer</h3><p>Write accurate, engaging guides on physical and human geography, hazards and climate. You have a degree or professional background in a geoscience, and can explain complex ideas simply. Paid per article.</p></div>
+    <div class="card"><span class="chip chip-sm">Freelance · Remote</span><h3 style="margin-top:.6rem">GIS contributor / cartographer</h3><p>Create datasets, map graphics and tutorials with QGIS, ArcGIS or open-source tools. Portfolio required. Paid per deliverable.</p></div>
+    <div class="card"><span class="chip chip-sm">Contract · Remote</span><h3 style="margin-top:.6rem">Front-end developer (maps &amp; games)</h3><p>Build fast, accessible interactive features with vanilla JS, Leaflet/MapLibre and canvas. Bonus: experience with geospatial data formats.</p></div>
+    <div class="card"><span class="chip chip-sm">Freelance · Remote</span><h3 style="margin-top:.6rem">Video creator &amp; editor</h3><p>Produce short explainers and map animations for YouTube and social channels. Motion-graphics experience a plus.</p></div>
+    <div class="card"><span class="chip chip-sm">Part-time · Remote</span><h3 style="margin-top:.6rem">Community &amp; contest manager</h3><p>Run the Monthly Map Challenge, coordinate judges and sponsors, and grow our newsletter and social community.</p></div>
+    <div class="card"><span class="chip chip-sm">Commission · Remote</span><h3 style="margin-top:.6rem">Partnerships &amp; sponsorship lead</h3><p>Bring in sponsors, education partners and geospatial providers. Experience in B2B or ed-tech sales preferred.</p></div>
+  </div>
+</section>
+<section class="wrap" id="apply">
+  <div class="form-card" style="max-width:820px;margin-inline:auto">
+    <h2>Apply</h2>
+    <form data-form="careers" data-subject="Geo.Vision JOB application" data-ok="Application received — thank you! We review applications weekly and reply to shortlisted candidates.">
+      <div class="row2"><div class="field"><label for="ja-name">Full name</label><input id="ja-name" name="name" required autocomplete="name"></div><div class="field"><label for="ja-email">Email</label><input id="ja-email" type="email" name="email" required autocomplete="email"></div></div>
+      <div class="row2"><div class="field"><label for="ja-role">Role</label><select id="ja-role" name="role" required><option value="">Choose…</option><option>Geography &amp; Earth-science writer</option><option>GIS contributor / cartographer</option><option>Front-end developer</option><option>Video creator &amp; editor</option><option>Community &amp; contest manager</option><option>Partnerships &amp; sponsorship lead</option><option>Open application</option></select></div><div class="field"><label for="ja-loc">Location / time zone</label><input id="ja-loc" name="location" required></div></div>
+      <div class="field"><label for="ja-port">Portfolio, LinkedIn or CV link</label><input id="ja-port" type="url" name="portfolio" placeholder="https://" required></div>
+      <div class="row2"><div class="field"><label for="ja-avail">Availability</label><select id="ja-avail" name="availability"><option>A few hours a week</option><option>10–20 hours a week</option><option>20+ hours a week</option><option>Per project</option></select></div><div class="field"><label for="ja-rate">Expected rate (optional)</label><input id="ja-rate" name="rate" placeholder="e.g. $40/hour or $250/article"></div></div>
+      <div class="field"><label for="ja-why">Why you, in a few lines</label><textarea id="ja-why" name="message" required></textarea></div>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-accent btn-block" type="submit">Send application</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<section class="wrap prose"><h2>How we work</h2><p>Every contributor gets a clear brief, a fair fee agreed up front, an editor who replies within a working day, and a byline or credit. We value accuracy over volume: every factual guide is checked against primary sources (national mapping agencies, USGS, NASA, peer-reviewed literature) before publication. We hire without regard to race, religion, gender, sexual orientation, age, disability or national origin.</p></section>

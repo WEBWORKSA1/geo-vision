@@ -1,0 +1,32 @@
+<!--META {"out":"videos.html","title":"Video Library — Earth from space, maps, GIS & earthquakes","desc":"A curated library of the best free videos on our planet: Earth from orbit, map projections, GIS basics and how earthquakes work, plus official science channels."} -->
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Videos</p><h1>Watch the planet</h1><p class="lede">Hand-picked videos from NASA and leading science educators. Videos load only when you press play, using YouTube's privacy-enhanced mode.</p></div></section>
+<section class="wrap">
+  <h2>Earth from space</h2>
+  <div class="grid-3">
+    <div class="vid-card"><div class="vid" data-yt="cu4ZvCguhaw" data-title="Earth from Orbit 2019" tabindex="0" role="button" aria-label="Play: Earth from Orbit 2019"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>Earth from Orbit: how NASA satellites picture Earth</h3><p>NASA · How a fleet of satellites builds a portrait of the whole planet every day.</p></div>
+    <div class="vid-card"><div class="vid" data-yt="iWKZ0_1f6hw" data-title="NASA's Vantage Point Over Earth" tabindex="0" role="button" aria-label="Play: NASA's Vantage Point Over Earth"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>NASA's vantage point over Earth</h3><p>NASA Goddard · From low orbit to the million-mile view of DSCOVR.</p></div>
+    <div class="vid-card"><div class="vid" data-yt="3oIcJBiynvw" data-title="Our Living Planet From Space" tabindex="0" role="button" aria-label="Play: Our Living Planet From Space"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>Our living planet from space</h3><p>NASA Goddard · Visualisations of the atmosphere, oceans and land in motion.</p></div>
+  </div>
+  <h2 style="margin-top:2.5rem">Maps &amp; GIS</h2>
+  <div class="grid-3">
+    <div class="vid-card"><div class="vid" data-yt="kIID5FDi2JQ" data-title="Why all world maps are wrong" tabindex="0" role="button" aria-label="Play: Why all world maps are wrong"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>Why all world maps are wrong</h3><p>Vox · The classic explainer on projections. Pair it with our <a href="guides/map-projections-explained.html">projections guide</a>.</p></div>
+    <div class="vid-card"><div class="vid" data-yt="ybXfc30a5XM" data-title="GIS concepts simplified" tabindex="0" role="button" aria-label="Play: GIS concepts simplified"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>GIS concepts simplified</h3><p>Geography with Dave · Capture, store, analyse, display — the building blocks of GIS.</p></div>
+    <div class="card"><h3>New to GIS?</h3><p>Start with our plain-English <a href="guides/what-is-gis.html">What is GIS?</a> guide, then explore real projects on the <a href="https://www.youtube.com/@esri" target="_blank" rel="noopener">Esri YouTube channel</a>. Have a GIS project? <a href="projects.html">Get matched with a specialist</a>.</p></div>
+  </div>
+  <h2 style="margin-top:2.5rem">Earthquakes &amp; plate tectonics</h2>
+  <div class="grid-3">
+    <div class="vid-card"><div class="vid" data-yt="Bs7u33DWOlw" data-title="What causes earthquakes" tabindex="0" role="button" aria-label="Play: What causes earthquakes"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>What causes earthquakes?</h3><p>Big Think · Why plates stick, slip and shake the ground.</p></div>
+    <div class="vid-card"><div class="vid" data-yt="RqqqSnaTfQo" data-title="How does an earthquake happen" tabindex="0" role="button" aria-label="Play: How does an earthquake happen"><button type="button" aria-hidden="true" tabindex="-1">▶</button></div><h3>How does an earthquake happen? (3D simulation)</h3><p>Let'stute · Faults and seismic waves visualised step by step.</p></div>
+    <div class="card"><h3>Watch live, then learn</h3><p>See every quake from the last hour on the <a href="live.html">Live Earth map</a>, then read <a href="guides/earthquakes-explained.html">earthquake magnitude explained</a>.</p></div>
+  </div>
+</section>
+<section class="wrap">
+  <h2>Official channels worth subscribing to</h2>
+  <div class="grid-4">
+    <a class="card card-link" href="https://www.youtube.com/@NASA" target="_blank" rel="noopener"><h3>NASA</h3><p>Missions, live ISS views and Earth science.</p></a>
+    <a class="card card-link" href="https://www.youtube.com/NASAGoddard" target="_blank" rel="noopener"><h3>NASA Goddard</h3><p>Data visualisations of Earth's systems.</p></a>
+    <a class="card card-link" href="https://www.youtube.com/@usgs" target="_blank" rel="noopener"><h3>USGS</h3><p>Earthquakes, volcanoes, water and maps.</p></a>
+    <a class="card card-link" href="https://www.youtube.com/@esri" target="_blank" rel="noopener"><h3>Esri</h3><p>GIS in practice across industries.</p></a>
+  </div>
+  <p class="muted small" style="margin-top:1rem">Videos are embedded from YouTube and remain the property of their creators. Geo.Vision is not affiliated with these channels. Suggest a video via our <a href="contact.html">contact form</a>.</p>
+</section>
