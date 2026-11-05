@@ -1,0 +1,95 @@
+<!--META {"out":"index.html","title":"Geo.Vision — Live Earth, geography games, world atlas & map tools","desc":"Watch the planet live: earthquakes, wildfires, storms and the ISS on one map. Play daily geography games, explore a 250-country atlas and use free map tools.","scripts":["home"],"schema":{"@context":"https://schema.org","@type":"WebSite","name":"Geo.Vision","url":"https://geo.vision/","description":"Live Earth data, geography games, world atlas and map tools."}} -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Live Earth · Games · Atlas · Tools</p>
+      <h1>See the planet, <em>live.</em></h1>
+      <p class="lede">Earthquakes as they happen, wildfires and storms tracked by NASA, the space station overhead, yesterday's satellite view of the whole world — plus daily geography games and an atlas of {{COUNTRY_COUNT}} countries and territories.</p>
+      <div class="cta">
+        <a class="btn btn-accent" href="live.html">Open the Live Earth map</a>
+        <a class="btn btn-ghost" href="play/outline.html">Play today's Outline</a>
+      </div>
+      <div class="stats" aria-label="Live statistics">
+        <div><b id="st-quakes">—</b><span>Quakes M2.5+ / 24 h</span></div>
+        <div><b id="st-max">—</b><span>Strongest today</span></div>
+        <div><b id="st-events">—</b><span>Open NASA events</span></div>
+        <div><b id="st-iss">27,600 km/h</b><span>ISS speed</span></div>
+      </div>
+    </div>
+    <div class="globe-wrap">
+      <canvas id="globe" aria-label="Rotating globe showing land, recent earthquakes and the ISS" role="img"></canvas>
+      <span class="hud h1">● M4+ quakes · last 24 h</span>
+      <span class="hud h2" id="hud-iss">ISS — locating…</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Earth Today</p><h2>What the planet is doing right now</h2></div><p>Auto-updated daily from USGS and NASA · {{ET_WHEN}}</p></div>
+  <div class="grid-2">
+    <div class="card reveal"><h3>Strongest earthquakes this week (M4.5+)</h3><ul class="quake-list">{{ET_QUAKES}}</ul><a class="btn btn-sm btn-ghost btn-block" href="earth-today.html">Full Earth Today briefing</a></div>
+    <div class="card reveal"><h3>Open natural events tracked by NASA</h3><p class="chips">{{ET_CATS}}</p><ul class="event-list">{{ET_EVENTS}}</ul><a class="btn btn-sm btn-ghost btn-block" href="live.html">See them on the live map</a></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Play</p><h2>Daily geography games</h2></div><p>Free, no sign-up, scores saved on your device.</p></div>
+  <div class="grid-4">
+    <a class="card card-link reveal" href="play/outline.html"><div class="icon">◈</div><h3>Daily Outline</h3><p>Name the country from its silhouette in six guesses. New puzzle every day.</p></a>
+    <a class="card card-link reveal" href="play/flags.html"><div class="icon">⚑</div><h3>Flag Frenzy</h3><p>How many flags can you identify in 60 seconds?</p></a>
+    <a class="card card-link reveal" href="play/pin.html"><div class="icon">⌖</div><h3>Pin the Country</h3><p>Find ten countries on a blank map. Hints point the way.</p></a>
+    <a class="card card-link reveal" href="play/bigger.html"><div class="icon">⇅</div><h3>Bigger or Smaller</h3><p>Which country is larger? Build the longest streak.</p></a>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow">For businesses &amp; organisations</p>
+      <h2>Need maps, drone surveys or satellite imagery?</h2>
+      <p class="lede">Tell us about your project once. We match you with vetted geospatial specialists — drone mapping, GIS analysis, satellite imagery sourcing, surveying and custom cartography — who reply with quotes. Free, no obligation.</p>
+      <ul class="chips"><li class="chip">Drone mapping &amp; inspection</li><li class="chip">GIS &amp; spatial analysis</li><li class="chip">Satellite imagery</li><li class="chip">Custom maps</li><li class="chip">Location intelligence</li></ul>
+    </div>
+    <div class="form-card">
+      <h3>Get free quotes in 2 minutes</h3>
+      <form data-form="lead-quick" data-subject="Geo.Vision quick lead" data-ok="Thanks! A project specialist will contact you within one business day.">
+        <div class="field"><label for="ql-service">What do you need?</label><select id="ql-service" name="service" required><option value="">Choose a service…</option><option>Drone mapping / aerial survey</option><option>GIS analysis &amp; consulting</option><option>Satellite imagery</option><option>Custom map design</option><option>Land / property survey</option><option>Location intelligence for business</option><option>Something else</option></select></div>
+        <div class="row2"><div class="field"><label for="ql-name">Name</label><input id="ql-name" name="name" required autocomplete="name"></div><div class="field"><label for="ql-email">Work email</label><input id="ql-email" type="email" name="email" required autocomplete="email"></div></div>
+        <div class="field"><label for="ql-loc">Project location</label><input id="ql-loc" name="location" placeholder="City, region or coordinates" required></div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-accent btn-block" type="submit">Get matched — free</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="muted small">Prefer more detail? Use the <a href="projects.html">full project brief</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Tools</p><h2>Free map tools you'll actually use</h2></div><a class="btn btn-sm btn-ghost" href="tools/index.html">All tools</a></div>
+  <div class="grid-3">
+    <a class="card card-link reveal" href="tools/distance.html"><h3>Distance calculator</h3><p>Great-circle distance, bearing, midpoint and flight time between any two points.</p></a>
+    <a class="card card-link reveal" href="tools/coordinates.html"><h3>Coordinate converter</h3><p>Decimal ↔ DMS, UTM and geohash — click the map or use your location.</p></a>
+    <a class="card card-link reveal" href="tools/sun.html"><h3>Sunrise &amp; sunset</h3><p>Sunrise, sunset, solar noon, day length and twilight for anywhere on Earth.</p></a>
+    <a class="card card-link reveal" href="tools/world-clock.html"><h3>World clock</h3><p>Live times across every time zone, with day/night at a glance.</p></a>
+    <a class="card card-link reveal" href="tools/antipode.html"><h3>Antipode finder</h3><p>Dig straight through the Earth — where would you come out?</p></a>
+    <a class="card card-link reveal" href="atlas/index.html"><h3>World atlas</h3><p>{{COUNTRY_COUNT}} country profiles with maps, neighbours and live local weather.</p></a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="sec-head"><div><p class="eyebrow">Learn</p><h2>Guides to maps, satellites &amp; our planet</h2></div><a class="btn btn-sm btn-ghost" href="guides/index.html">All guides</a></div>
+  <div class="grid-3">
+    <a class="card card-link reveal" href="guides/what-is-gis.html"><span class="chip chip-sm">GIS</span><h3>What is GIS? A plain-English guide</h3><p>Layers, vectors, rasters and how organisations use location data to decide.</p></a>
+    <a class="card card-link reveal" href="guides/map-projections-explained.html"><span class="chip chip-sm">Cartography</span><h3>Why every world map is wrong</h3><p>Mercator, equal-area and compromise projections — and when to use each.</p></a>
+    <a class="card card-link reveal" href="guides/how-satellites-see-earth.html"><span class="chip chip-sm">Remote sensing</span><h3>How satellites see Earth</h3><p>Orbits, resolution, true and false colour, and where to get free imagery.</p></a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="grid-3">
+    <div class="card reveal"><p class="eyebrow">Contests</p><h3>Monthly Map Challenge</h3><p>Create a map, photo or story about a place you love. Winners get cash prizes, features and gear.</p><a class="btn btn-sm btn-accent" href="contests.html">Enter this month</a></div>
+    <div class="card reveal"><p class="eyebrow">Careers</p><h3>Help build Geo.Vision</h3><p>We're looking for writers, GIS contributors, developers and video creators — remote, flexible.</p><a class="btn btn-sm btn-ghost" href="careers.html">See open roles</a></div>
+    <div class="card reveal"><p class="eyebrow">Support</p><h3>Keep the planet free to explore</h3><p>Every contribution funds servers, new tools, contest prizes and paying contributors.</p><a class="btn btn-sm btn-sun" href="support.html">Become a supporter</a></div>
+  </div>
+</section>

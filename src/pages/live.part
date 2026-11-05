@@ -1,0 +1,47 @@
+<!--META {"out":"live.html","title":"Live Earth Map — earthquakes, wildfires, storms & ISS in real time","desc":"Real-time map of earthquakes (USGS), wildfires, storms and volcanoes (NASA EONET), the International Space Station and the day/night line, over NASA satellite imagery.","scripts":["leaflet","live"],"noNewsletter":false} -->
+<h1 class="sr">Live Earth map</h1>
+<div class="live-layout">
+  <div id="map" role="application" aria-label="Interactive live Earth map"></div>
+  <aside class="live-panel" aria-label="Map controls and live data">
+    <h2>Base map</h2>
+    <div class="pill-row">
+      <button class="on" data-base="Blue Marble (relief)">Blue Marble</button>
+      <button data-base="Yesterday's satellite (MODIS)">Yesterday's satellite</button>
+      <button data-base="Night lights (VIIRS)">Night lights</button>
+      <button data-base="Streets (OpenStreetMap)">Streets</button>
+    </div>
+    <h2>Layers</h2>
+    <label class="toggle">Earthquakes (USGS) <input type="checkbox" data-layer="quakes" checked></label>
+    <label class="toggle">Natural events (NASA EONET) <input type="checkbox" data-layer="events" checked></label>
+    <label class="toggle">International Space Station <input type="checkbox" data-layer="iss" checked></label>
+    <label class="toggle">Day / night shadow <input type="checkbox" data-layer="night" checked></label>
+    <button class="btn btn-sm btn-ghost btn-block" id="locate" type="button">Show my location</button>
+
+    <h2>🛰️ ISS right now</h2>
+    <div class="iss-box" id="iss-box">Locating the station…</div>
+    <label class="toggle">Follow the ISS <input type="checkbox" id="iss-follow"></label>
+
+    <h2>Natural events (open, last 30 days)</h2>
+    <p class="chips" id="event-counts"><span class="muted">Loading NASA EONET…</span></p>
+
+    <h2>Earthquakes <small class="muted small" id="q-updated"></small></h2>
+    <div class="pill-row">
+      <button data-feed="all_hour">Past hour</button>
+      <button class="on" data-feed="2.5_day">M2.5+ 24 h</button>
+      <button data-feed="4.5_week">M4.5+ 7 days</button>
+      <button data-feed="significant_month">Significant 30 d</button>
+    </div>
+    <p class="small"><b id="q-count">—</b> events · strongest <b id="q-max">—</b></p>
+    <ul class="quake-list" id="quake-list"></ul>
+    <p class="muted small" style="margin-top:1rem">Data: USGS Earthquake Hazards Program, NASA EONET, NASA GIBS, wheretheiss.at, &copy; OpenStreetMap contributors. Information only — for emergencies follow your local authorities.</p>
+  </aside>
+</div>
+<section class="wrap prose">
+  <h2>How to read the Live Earth map</h2>
+  <p>This map combines several free, public scientific data feeds so you can see what is happening on the planet at a glance. Circles are earthquakes: the bigger and warmer the colour, the stronger the shaking — teal circles are small (under magnitude 4), amber is moderate (5+), and red marks major events (6 and above). Click any circle for the time, depth and a link to the official USGS event page. The quake list in the panel refreshes every two minutes.</p>
+  <p>Emoji markers are natural events tracked by NASA's Earth Observatory Natural Event Tracker (EONET): 🔥 wildfires, 🌀 severe storms (with their recent track drawn as a dashed line), 🌋 volcanoes, 🧊 sea and lake ice, 🌊 floods and more. These are curated events, not every hotspot — big fires and named storms are well covered; small local events may not appear.</p>
+  <p>The 🛰️ icon is the International Space Station, refreshed every five seconds. The solid amber line is where it has been since you opened the page; the dashed line is where it will be over the next 90 minutes. The faint circle shows roughly the area of Earth's surface the crew can see. The dark band is night: everything inside it is currently in Earth's shadow, and the amber dot is the sub-solar point where the Sun is directly overhead.</p>
+  <h3>About the base maps</h3>
+  <p><b>Blue Marble</b> is a cloud-free composite of the planet with shaded relief and ocean depth. <b>Yesterday's satellite</b> is a true-colour mosaic stitched from NASA's Terra satellite passes over the previous day — you will see real clouds, smoke plumes, dust storms and snow cover, with diagonal gaps where the satellite didn't pass. <b>Night lights</b> shows city lights captured by the VIIRS instrument. <b>Streets</b> is the community-built OpenStreetMap.</p>
+  <p>Want to go deeper? Read <a href="guides/earthquakes-explained.html">how earthquake magnitude works</a> or <a href="guides/how-satellites-see-earth.html">how satellites see Earth</a>, or check today's <a href="earth-today.html">Earth Today briefing</a>.</p>
+</section>

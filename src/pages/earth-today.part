@@ -1,0 +1,27 @@
+<!--META {"out":"earth-today.html","title":"Earth Today — daily briefing on earthquakes, wildfires & storms","desc":"Auto-updated daily briefing: the week's strongest earthquakes and every open wildfire, storm, volcano and flood tracked by NASA, with links to official sources.","schema":{"@context":"https://schema.org","@type":"Dataset","name":"Geo.Vision Earth Today","description":"Daily digest of significant earthquakes (USGS) and open natural events (NASA EONET).","creator":{"@type":"Organization","name":"Geo.Vision"},"isAccessibleForFree":true}} -->
+<section class="page-hero"><div class="wrap">
+  <p class="eyebrow">Earth Today · updated automatically every day</p>
+  <h1>The planet's daily briefing</h1>
+  <p class="lede">A once-a-day snapshot of significant seismic activity and natural hazards, compiled automatically from the U.S. Geological Survey and NASA's Earth Observatory Natural Event Tracker.</p>
+  <p class="chips"><span class="chip">Last compiled <b>{{ET_WHEN}}</b></span><span class="chip">M4.5+ quakes this week <b>{{ET_QCOUNT}}</b></span></p>
+</div></section>
+<section class="wrap two-col">
+  <article class="prose">
+    <h2>Strongest earthquakes in the past 7 days</h2>
+    <ul class="quake-list">{{ET_QUAKES}}</ul>
+    <p class="muted small">Ranked by magnitude from the USGS "M4.5+ past week" feed. Magnitudes can be revised by seismologists in the hours after an event.</p>
+    <h2>Open natural events</h2>
+    <p class="chips">{{ET_CATS}}</p>
+    <ul class="event-list">{{ET_EVENTS}}</ul>
+    <h2>How to use this briefing</h2>
+    <p>Earth Today is designed to be read in two minutes. The earthquake list tells you where the crust released the most energy this week — most large events happen along the Pacific "Ring of Fire" and the Alpine–Himalayan belt, where tectonic plates converge. A magnitude 6 releases about 32 times more energy than a magnitude 5, so the top of the list usually dominates the week's seismic story.</p>
+    <p>The natural-events section lists hazards that NASA's EONET team is actively tracking from satellite observations. Each link goes to the original source (for example an InciWeb wildfire page, a GDACS alert or a Smithsonian volcano report). An event stays "open" until its source declares it over, so a wildfire may appear for weeks.</p>
+    <div class="callout"><b>Safety note:</b> Geo.Vision is an educational summary, not a warning service. For alerts that affect you, follow your national meteorological or geological agency and local emergency services.</div>
+    <p>Want this in your inbox? Subscribe to <b>The Daily Orbit</b> below, or explore everything in motion on the <a href="live.html">Live Earth map</a>.</p>
+  </article>
+  <aside class="side">
+    <div class="card"><h3>Go live</h3><p>See every quake from the past hour and the ISS moving in real time.</p><a class="btn btn-accent btn-block" href="live.html">Open live map</a></div>
+    <div class="card card-lead"><h3>Hazard &amp; risk mapping</h3><p>Insurers, builders and NGOs: get flood, wildfire and seismic risk maps from GIS specialists.</p><a class="btn btn-accent btn-block" href="projects.html?service=GIS%20analysis%20%26%20consulting">Request a quote</a></div>
+    <div class="card"><h3>Learn</h3><ul class="plain"><li><a href="guides/earthquakes-explained.html">Earthquake magnitude explained</a></li><li><a href="guides/how-satellites-see-earth.html">How satellites see Earth</a></li></ul></div>
+  </aside>
+</section>
