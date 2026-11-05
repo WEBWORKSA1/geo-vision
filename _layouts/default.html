@@ -1,0 +1,96 @@
+{%- if page.slug -%}{%- assign cc = site.data.countries | where: "slug", page.slug | first -%}{%- capture gv_title -%}{{ cc.n }} — map, capital, facts & live weather{%- endcapture -%}{%- capture gv_desc -%}{{ cc.n }}: capital {{ cc.cap | default: 'n/a' }}{% if cc.af != '' %}, {{ cc.af }} km²{% endif %}, languages, currency, neighbours, map and live local conditions. Free world atlas from Geo.Vision.{%- endcapture -%}{%- assign gv_scripts = "leaflet,country" | split: "," -%}{%- else -%}{%- assign gv_title = page.title -%}{%- assign gv_desc = page.description -%}{%- assign gv_scripts = page.scripts -%}{%- endif -%}
+{%- if gv_title contains 'Geo.Vision' -%}{%- assign gv_full = gv_title -%}{%- else -%}{%- capture gv_full -%}{{ gv_title }} | Geo.Vision{%- endcapture -%}{%- endif -%}
+{%- capture gv_canon -%}{{ site.url }}{{ page.url | replace: 'index.html', '' }}{%- endcapture -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ gv_full | escape }}</title>
+<meta name="description" content="{{ gv_desc | escape }}">
+<meta name="robots" content="{{ page.robots | default: 'index,follow' }}">
+<link rel="canonical" href="{{ gv_canon }}">
+<meta name="theme-color" content="#050a16">
+<meta property="og:site_name" content="Geo.Vision">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:title" content="{{ gv_full | escape }}">
+<meta property="og:description" content="{{ gv_desc | escape }}">
+<meta property="og:url" content="{{ gv_canon }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+{%- if gv_scripts contains 'leaflet' %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+{%- endif %}
+<link rel="stylesheet" href="/assets/css/site.css">
+{%- unless page.noads %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
+{%- endunless %}
+{%- if page.slug %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Place","name":{{ cc.n | jsonify }},"geo":{"@type":"GeoCoordinates","latitude":{{ cc.ll[0] }},"longitude":{{ cc.ll[1] }}},"url":"{{ gv_canon }}"}</script>
+{%- elsif page.schema %}
+<script type="application/ld+json">{{ page.schema }}</script>
+{%- endif %}
+</head>
+<body data-root="/">
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership <span aria-hidden="true">&rarr;</span></a></div>
+<header class="site-header">
+  <div class="wrap hdr">
+    <a class="brand" href="/index.html" aria-label="Geo.Vision home"><img src="/assets/img/logo.svg" alt="" width="34" height="34"><span>Geo<b>.</b>Vision</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="nav" class="nav" aria-label="Main">
+      {%- assign gv_nav = "/live.html|Live Earth;/play/|Play;/atlas/|Atlas;/tools/|Tools;/guides/|Learn;/videos.html|Videos;/support.html|Support" | split: ";" -%}
+      {%- for item in gv_nav -%}{%- assign parts = item | split: "|" -%}{%- assign href = parts[0] -%}{%- if href contains '.html' -%}{%- assign link = href -%}{%- else -%}{%- capture link -%}{{ href }}index.html{%- endcapture -%}{%- endif -%}
+      <a href="{{ link }}"{% if page.url == href or page.url == link %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
+      {%- endfor -%}
+      <a class="btn btn-sm btn-accent" href="/projects.html">Start a project</a></nav>
+  </div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+{%- unless page.no_newsletter %}
+<section class="newsletter">
+  <div class="wrap nl-grid">
+    <div><p class="eyebrow">The Daily Orbit</p><h2>One email. The whole planet.</h2><p>Significant earthquakes, wildfires, storms, new satellite views and a geography puzzle — every morning, free. Unsubscribe anytime.</p></div>
+    <form class="nl-form" data-form="newsletter" data-subject="Geo.Vision newsletter signup">
+      <label class="sr" for="nl-email">Email address</label>
+      <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-accent" type="submit">Subscribe</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+{%- endunless %}
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="/index.html"><img src="/assets/img/logo.svg" alt="" width="30" height="30"><span>Geo<b>.</b>Vision</span></a>
+      <p>Live Earth data, geography games, a world atlas and practical guides to maps, satellites and GIS. Free for everyone, funded by ads and supporters.</p>
+      <a class="btn btn-sm btn-ghost" href="/support.html">Support Geo.Vision</a>
+    </div>
+    <div><h3>Explore</h3><a href="/live.html">Live Earth map</a><a href="/earth-today.html">Earth Today briefing</a><a href="/atlas/index.html">World atlas</a><a href="/videos.html">Video library</a><a href="/guides/index.html">Guides</a></div>
+    <div><h3>Play &amp; tools</h3><a href="/play/outline.html">Daily Outline</a><a href="/play/flags.html">Flag Frenzy</a><a href="/play/pin.html">Pin the Country</a><a href="/tools/distance.html">Distance calculator</a><a href="/tools/sun.html">Sunrise &amp; sunset</a></div>
+    <div><h3>Work with us</h3><a href="/projects.html">Get a geospatial quote</a><a href="/projects.html#providers">List your firm</a><a href="/advertise.html">Advertise &amp; sponsor</a><a href="/contests.html">Contests &amp; prizes</a><a href="/careers.html">Careers</a><a href="/contact.html">Contact</a></div>
+    <div><h3>Legal</h3><a href="/about.html">About</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of use</a><a href="/cookies.html">Cookie policy</a><a href="/disclaimer.html">Disclaimer</a><a href="/trademark.html">Trademark &amp; copyright</a></div>
+  </div>
+  <div class="wrap foot-legal">
+    <p>&copy; {{ site.time | date: "%Y" }} Geo.Vision. All rights reserved. Geo.Vision is an independent educational website. It is not affiliated with, endorsed by or connected to GeoVision Inc., Google, NASA, USGS, Esri or any other company or agency named on this site; all third-party names and marks belong to their owners. Data: NASA GIBS &amp; EONET, USGS, &copy; OpenStreetMap contributors, Natural Earth, mledoze/countries. <a href="/trademark.html">Full disclosure</a>.</p>
+  </div>
+</footer>
+<div class="cookie" hidden><p>We use cookies for analytics and to show ads from Google and its partners. See our <a href="/cookies.html">cookie policy</a>.</p><div><button class="btn btn-sm btn-accent" data-cookie="ok">Accept</button><button class="btn btn-sm btn-ghost" data-cookie="min">Essential only</button></div></div>
+{%- if gv_scripts contains 'leaflet' %}
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+{%- endif %}
+<script src="/assets/js/site.js" defer></script>
+{%- for s in gv_scripts %}{% unless s == 'leaflet' %}
+<script src="/assets/js/{{ s }}.js" defer></script>
+{%- endunless %}{% endfor %}
+</body>
+</html>

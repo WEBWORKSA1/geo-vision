@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<section class="page-hero compact"><div class="wrap"><nav class="crumbs"><a href="/index.html">Home</a> / <a href="/guides/index.html">Guides</a> / <span>{{ page.cat }}</span></nav><h1>{{ page.h1 }}</h1><p class="lede">{{ page.description }}</p><p class="muted small">By the Geo.Vision editorial team · Updated {{ page.updated }} · {{ page.mins }} min read</p></div></section>
+<section class="wrap two-col"><article class="prose">{% include {{ page.part }} %}</article>
+<aside class="side"><div class="card card-lead"><h3>Have a mapping project?</h3><p>Describe it once and get matched with drone, GIS and imagery specialists.</p><a class="btn btn-accent btn-block" href="/projects.html">Get free quotes</a></div><div class="card"><h3>Keep reading</h3><ul class="plain">{%- assign gv_guides = site.pages | where: "layout", "guide" | sort: "order" -%}{%- assign shown = 0 -%}{%- for g in gv_guides -%}{%- if g.url != page.url and shown < 3 -%}<li><a href="{{ g.url }}">{{ g.h1 }}</a></li>{%- assign shown = shown | plus: 1 -%}{%- endif -%}{%- endfor -%}</ul></div><div class="card"><h3>Play</h3><p>Today's Outline puzzle is live.</p><a class="btn btn-ghost btn-block" href="/play/outline.html">Play the Daily Outline</a></div></aside></section>

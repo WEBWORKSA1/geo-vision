@@ -1,0 +1,22 @@
+# Geo.Vision — GitHub Pages (Jekyll) configuration
+title: Geo.Vision
+description: Live Earth data, geography games, a world atlas and map tools.
+url: "https://geo.vision"
+baseurl: ""
+adsense_client: ca-pub-6620975821265271
+includes_dir: src
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - BUILD-PROMPTS.md
+  - RESEARCH.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - build
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
