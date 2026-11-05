@@ -119,7 +119,17 @@
   GV.haversine = (a, b) => { const R = 6371.0088, r = Math.PI / 180; const dLat = (b[0] - a[0]) * r, dLon = (b[1] - a[1]) * r; const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLon / 2) ** 2; return 2 * R * Math.asin(Math.min(1, Math.sqrt(h))); };
   GV.bearing = (a, b) => { const r = Math.PI / 180; const y = Math.sin((b[1] - a[1]) * r) * Math.cos(b[0] * r); const x = Math.cos(a[0] * r) * Math.sin(b[0] * r) - Math.sin(a[0] * r) * Math.cos(b[0] * r) * Math.cos((b[1] - a[1]) * r); return (Math.atan2(y, x) / r + 360) % 360; };
   GV.arrow = (deg) => ['⬆️', '↗️', '➡️', '↘️', '⬇️', '↙️', '⬅️', '↖️'][Math.round(deg / 45) % 8];
-  GV.json = (p) => fetch(GV.root + p).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  const getJSON = (p) => fetch(GV.root + p).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  // Country shapes: Natural Earth 1:110m via the world-atlas package on jsDelivr, joined to our country list by ISO numeric code.
+  let worldP = null;
+  const loadWorld = async () => {
+    const [topo, C] = await Promise.all([fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then((r) => r.json()), getJSON('data/countries.json')]);
+    if (!window.topojson) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js'; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    const byNum = {}; C.forEach((c) => { if (c.num) byNum[String(Number(c.num))] = c; });
+    const fc = window.topojson.feature(topo, topo.objects.countries);
+    return { type: 'FeatureCollection', features: fc.features.filter((f) => f.geometry && byNum[String(Number(f.id))]).map((f) => { const c = byNum[String(Number(f.id))]; return { type: 'Feature', properties: { a3: c.a3, n: c.n }, geometry: f.geometry }; }) };
+  };
+  GV.json = (p) => (p === 'data/world.geo.json' ? (worldP = worldP || loadWorld()) : getJSON(p));
   GV.store = { get: (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
   GV.gibs = (layer, level, ext, date) => `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${layer}/default/${date ? date + '/' : ''}GoogleMapsCompatible_Level${level}/{z}/{y}/{x}.${ext}`;
   GV.yesterday = () => new Date(Date.now() - 864e5).toISOString().slice(0, 10);
