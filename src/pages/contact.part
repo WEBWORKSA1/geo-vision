@@ -1,0 +1,20 @@
+<!--META {"out":"contact.html","title":"Contact Geo.Vision","desc":"Contact Geo.Vision for questions, corrections, partnerships, advertising, press or website and domain inquiries."} -->
+<section class="page-hero"><div class="wrap"><p class="eyebrow">Contact</p><h1>Talk to us</h1><p class="lede">We read every message and reply within one to two business days.</p></div></section>
+<section class="wrap two-col">
+  <div class="form-card">
+    <form data-form="contact" data-subject="Geo.Vision CONTACT">
+      <div class="row2"><div class="field"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div><div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"></div></div>
+      <div class="field"><label for="c-topic">Topic</label><select id="c-topic" name="topic" required><option value="">Choose…</option><option>General question</option><option>Correction / data error</option><option>Geospatial project quote</option><option>Advertising &amp; sponsorship</option><option>Partnership</option><option>Website / domain acquisition</option><option>Press</option><option>Privacy request</option><option>Other</option></select></div>
+      <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required minlength="10"></textarea></div>
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree that Geo.Vision may use these details to reply to me, as described in the <a href="privacy.html">privacy policy</a>.</label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-accent btn-block" type="submit">Send message</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <aside class="side">
+    <div class="card"><h3>Prefer email?</h3><p>Open a pre-addressed message in your email app.</p><a class="btn btn-ghost btn-block" data-mail="Geo.Vision inquiry">Email Geo.Vision</a></div>
+    <div class="card card-lead"><h3>Website, domain, sponsorship or partnership?</h3><p>Interested in acquiring this website or the Geo.Vision domain name, or in a sponsorship, advertising or partnership deal?</p><a class="btn btn-accent btn-block" href="https://web.works/contact" target="_blank" rel="noopener">Contact the owner</a></div>
+    <div class="card"><h3>Need a quote?</h3><p>Use the project brief for the fastest response.</p><a class="btn btn-ghost btn-block" href="projects.html">Start a project</a></div>
+  </aside>
+</section>

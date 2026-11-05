@@ -1,0 +1,10 @@
+<!--META {"out":"disclaimer.html","title":"Disclaimer","desc":"Important limitations of Geo.Vision's live data, maps, tools, guides, sponsored content and matching service."} -->
+<section class="page-hero compact"><div class="wrap"><h1>Disclaimer</h1><p class="muted">Last updated: {{TODAY}}</p></div></section>
+<section class="wrap prose">
+<h2>Not a warning or emergency service</h2><p>Earthquake, natural-event, ISS and weather information on Geo.Vision is drawn from public feeds (USGS, NASA EONET, NASA GIBS, wheretheiss.at, Open-Meteo) and may be delayed, revised or unavailable. It is provided for awareness and education only. In an emergency, follow official alerts and local authorities.</p>
+<h2>Maps and borders</h2><p>Boundaries are simplified for display and do not imply any opinion on the legal status of any territory or the delimitation of any frontier. Country lists follow the ISO 3166 standard as represented in our source data.</p>
+<h2>Tools</h2><p>Calculations (distances, coordinates, UTM, sunrise and sunset, antipodes) are approximations suitable for education and planning, not for navigation, surveying or legal use.</p>
+<h2>Guides and videos</h2><p>Guides are written for general education and are not professional, engineering, legal or financial advice. Embedded videos are third-party content; their views are their creators' own.</p>
+<h2>Advertising, sponsorship and referrals</h2><p>Geo.Vision displays ads from Google AdSense and may publish clearly labelled sponsored content. We may receive referral fees from providers introduced through Geo.Vision Projects. These relationships do not affect editorial content.</p>
+<h2>External links</h2><p>We are not responsible for the content or practices of external websites.</p>
+</section>

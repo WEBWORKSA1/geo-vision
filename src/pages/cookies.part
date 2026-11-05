@@ -1,0 +1,14 @@
+<!--META {"out":"cookies.html","title":"Cookie Policy","desc":"Which cookies and local storage Geo.Vision and its advertising partners use, and how to control them."} -->
+<section class="page-hero compact"><div class="wrap"><h1>Cookie policy</h1><p class="muted">Last updated: {{TODAY}}</p></div></section>
+<section class="wrap prose">
+<p>Cookies are small text files stored by your browser. Geo.Vision itself sets no tracking cookies. We use your browser's local storage for features you'd expect to be remembered, and our advertising partner Google uses cookies to show and measure ads.</p>
+<table><thead><tr><th>Name / type</th><th>Set by</th><th>Purpose</th><th>Duration</th></tr></thead><tbody>
+<tr><td>gv-consent (local storage)</td><td>Geo.Vision</td><td>Remembers your cookie notice choice</td><td>Until cleared</td></tr>
+<tr><td>gv-outline-*, gv-best-*, gv-zones (local storage)</td><td>Geo.Vision</td><td>Game progress, scores and your world-clock list</td><td>Until cleared</td></tr>
+<tr><td>Advertising cookies (e.g. __gads, __gpi, IDE)</td><td>Google AdSense / DoubleClick</td><td>Serve, personalise and measure ads; limit frequency; prevent fraud</td><td>Up to 13 months</td></tr>
+<tr><td>Embedded content</td><td>YouTube (only after you press play)</td><td>Video playback</td><td>Per YouTube policy</td></tr>
+</tbody></table>
+<h2>Your choices</h2>
+<ul><li>Use our cookie notice: "Essential only" requests non-personalised ads.</li><li>Manage personalised ads at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ads Settings</a> or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>.</li><li>Block or delete cookies and local storage in your browser settings. The Site will still work; games will forget your scores.</li></ul>
+<p>More detail is in our <a href="privacy.html">privacy policy</a>.</p>
+</section>
