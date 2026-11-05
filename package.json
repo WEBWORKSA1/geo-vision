@@ -1,0 +1,15 @@
+{
+  "name": "geo-vision",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Geo.Vision static website — live Earth data, geography games, world atlas and map tools.",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs"
+  },
+  "devDependencies": {
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2",
+    "world-countries": "5.1.0"
+  }
+}
